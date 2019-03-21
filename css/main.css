@@ -1,3 +1,33 @@
+h3{
+  font-family: "PT_Sans_Bold";
+  font-size: 28px;
+  line-height: 37px;
+  color: #BCBCBC;
+}
+
+h4 {
+  font-family: "Open_Sans_Regular";
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+  margin-top: 16px;
+  margin-bottom: 56px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+  color: #383838;
+}
+
+span {
+  font-family: "PT_Sans_Bold";
+}
+
+
+
+
+
 
 
 /* ---------- MENU ---------- */
@@ -219,26 +249,6 @@
   height: 423px;
 }
 
-.about h3{
-  font-family: "PT_Sans_Bold";
-  font-size: 28px;
-  line-height: 37px;
-  color: #BCBCBC;
-}
-
-.about h4 {
-  font-family: "Open_Sans_Regular";
-  font-size: 46px;
-  line-height: 52px;
-  color: #383838;
-  margin-top: 16px;
-  margin-bottom: 56px;
-}
-
-.about span {
-  font-family: "PT_Sans_Bold";
-}
-
 .about p {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -270,3 +280,134 @@
   transition: 0.5s;
 
 }
+
+iframe {
+  margin-top: 50px;
+}
+
+
+/* ---------- DELIVERY ---------- */
+
+.delivery {
+  position: relative;
+  background: #E8F2F6;
+  padding: 40px;
+}
+
+.delivery-title {
+  position: absolute;
+  margin-top: 30px;
+}
+
+.pulseAnim {
+	fill: #EB7F00;
+	transform-origin: 50% 50%;
+	animation: pulse 4000ms ease-in infinite both;
+}
+
+.dotted-map {
+	fill: #FFFFFF;
+	fill-rule: nonzero;
+}
+
+@keyframes pulse {
+	0% {
+		r: 5;
+		opacity: 1;
+	}
+	50%,
+	70% {
+		r: 7;
+		opacity: 1;
+	}
+	100% {
+		r: 5;
+		opacity: 1;
+	}
+}
+
+
+/* ---------- COOPERATION ---------- */
+
+.cooperation-title {
+  margin-top: 70px;
+}
+
+.col {
+  padding: 0;
+}
+.svg-block {
+  padding: 40px;
+  text-align: center;
+}
+
+.svg-block h5 {
+  margin-bottom: 45px;
+}
+
+.icon-circles {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.circle-1, .circle-2, .circle-3, .circle-4, .circle-5 {
+  margin: 50px auto;
+}
+
+.line {
+  position: absolute;
+  background:linear-gradient(180deg, #4DA0DF -30%, #225378 102%);
+  height: 5px;
+  width: 100%;
+  top: 128px;
+  left: 55%;
+  z-index: -1; 
+}
+
+.circle-1 {
+  width: 30px;
+  height: 30px;
+  background: #EB7F00;
+  border-radius: 50%;
+  z-index: 99;
+
+}
+.circle-2 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+
+}
+.circle-3 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+
+}
+.circle-4 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+
+}
+.circle-5 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+
+}
+
+.buttons-cooperation {
+  margin-top: 30px;
+}
+
