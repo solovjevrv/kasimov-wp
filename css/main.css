@@ -102,7 +102,7 @@ span {
 /* ---------- HERO ---------- */
 
 .hero {
-  background: url(/img/sadok-1.png) no-repeat;
+  background: url(../img/sadok-1.png) no-repeat;
   background-size: cover;
   height: 834px;
   
@@ -155,7 +155,7 @@ span {
 }
 
 .hidden-block {
-  background: url(/img/sadok-2.png) no-repeat;
+  background: url(../img/sadok-2.png) no-repeat;
   background-size: cover;
   height: 953px;
   display: none;
@@ -345,6 +345,10 @@ iframe {
   margin-bottom: 45px;
 }
 
+.svg-block path {
+  transition: 0.3s;
+}
+
 .icon-circles {
   position: relative;
   display: flex;
@@ -364,6 +368,7 @@ iframe {
   top: 128px;
   left: 55%;
   z-index: -1; 
+  transition: 0.4s;
 }
 
 .circle-1 {
@@ -372,6 +377,7 @@ iframe {
   background: #EB7F00;
   border-radius: 50%;
   z-index: 99;
+  transition: 0.4s;
 
 }
 .circle-2 {
@@ -380,6 +386,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
+  transition: 0.4s;
 
 }
 .circle-3 {
@@ -388,6 +395,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
+  transition: 0.4s;
 
 }
 .circle-4 {
@@ -396,6 +404,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
+  transition: 0.4s;
 
 }
 .circle-5 {
@@ -404,6 +413,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
+  transition: 0.4s;
 
 }
 
@@ -411,3 +421,18 @@ iframe {
   margin-top: 30px;
 }
 
+
+/* ---------- NEWS ---------- */
+
+.news-title {
+  margin-top: 50px;
+}
+
+.news img {
+  width: 100%;
+}
+
+.new-prev {
+  box-shadow: 2px 2px 10px rgba(162, 162, 162, 0.5);
+  
+}

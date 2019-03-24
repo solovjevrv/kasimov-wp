@@ -1,27 +1,27 @@
 @font-face {
   font-family: "PT_Sans_Regular";
-  src: url(/fonts/PTSans-Regular.ttf) format("truetype");
+  src: url(../fonts/PTSans-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 } 
 
 @font-face {
   font-family: "PT_Sans_Bold";
-  src: url(/fonts/PTSans-Bold.ttf) format("truetype");
+  src: url(../fonts/PTSans-Bold.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 } 
 
 @font-face {
   font-family: "Open_Sans_Regular";
-  src: url(/fonts/OpenSans-Regular.ttf) format("truetype");
+  src: url(../fonts/OpenSans-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 } 
 
 @font-face {
   font-family: "Open_Sans_SemiBold";
-  src: url(/fonts/OpenSans-SemiBold.ttf) format("truetype");
+  src: url(../fonts/OpenSans-SemiBold.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 } 
