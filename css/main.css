@@ -342,11 +342,12 @@ iframe {
 }
 
 .svg-block h5 {
+  font-size: 16px;
   margin-bottom: 45px;
 }
 
 .svg-block path {
-  transition: 0.3s;
+  transition: 0.6s;
 }
 
 .icon-circles {
@@ -362,13 +363,13 @@ iframe {
 
 .line {
   position: absolute;
-  background:linear-gradient(180deg, #4DA0DF -30%, #225378 102%);
+  background:#225378;
   height: 5px;
   width: 100%;
   top: 128px;
   left: 55%;
   z-index: -1; 
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 .circle-1 {
@@ -377,7 +378,7 @@ iframe {
   background: #EB7F00;
   border-radius: 50%;
   z-index: 99;
-  transition: 0.4s;
+  transition: 0.6s;
 
 }
 .circle-2 {
@@ -386,7 +387,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
-  transition: 0.4s;
+  transition: 0.6s;
 
 }
 .circle-3 {
@@ -395,7 +396,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
-  transition: 0.4s;
+  transition: 0.6s;
 
 }
 .circle-4 {
@@ -404,7 +405,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
-  transition: 0.4s;
+  transition: 0.6s;
 
 }
 .circle-5 {
@@ -413,7 +414,7 @@ iframe {
   background: #225378;
   border-radius: 50%;
   z-index: 99;
-  transition: 0.4s;
+  transition: 0.6s;
 
 }
 
@@ -433,6 +434,52 @@ iframe {
 }
 
 .new-prev {
+  height: 427px;
   box-shadow: 2px 2px 10px rgba(162, 162, 162, 0.5);
   
+}
+
+.new-prev-content {
+  padding: 15px;
+}
+
+.post-title{
+  font-family: "Open_Sans_SemiBold";
+  font-size: 22px;
+  line-height: 30px;
+  color: #333333;
+}
+
+.post-data {
+  font-family: "Open_Sans_Regular";
+  font-size: 10px;
+  line-height: 14px;
+  color: #8B8B8B;
+}
+
+.post-text {
+  font-family: "Open_Sans_Regular";
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+}
+
+.post-button {
+  font-size: 14px;
+  line-height: 19px;
+  color: #225378;
+  border-bottom: 2px solid #EB7F00;
+  
+}
+
+.post-button:hover {
+  color: #225378;
+  text-decoration:none;
+  border: none;
+}
+
+.button-all-news {
+  text-align: right;
+  padding: 15px;
+  font-family: "Open_Sans_SemiBold";
 }
