@@ -1,3 +1,33 @@
+h3{
+  font-family: "PT_Sans_Bold";
+  font-size: 28px;
+  line-height: 37px;
+  color: #BCBCBC;
+}
+
+h4 {
+  font-family: "Open_Sans_Regular";
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+  margin-top: 16px;
+  margin-bottom: 56px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+  color: #383838;
+}
+
+span {
+  font-family: "PT_Sans_Bold";
+}
+
+
+
+
+
 
 
 /* ---------- MENU ---------- */
@@ -72,7 +102,7 @@
 /* ---------- HERO ---------- */
 
 .hero {
-  background: url(/img/sadok-1.png) no-repeat;
+  background: url(../img/sadok-1.png) no-repeat;
   background-size: cover;
   height: 834px;
   
@@ -125,7 +155,7 @@
 }
 
 .hidden-block {
-  background: url(/img/sadok-2.png) no-repeat;
+  background: url(../img/sadok-2.png) no-repeat;
   background-size: cover;
   height: 953px;
   display: none;
@@ -219,26 +249,6 @@
   height: 423px;
 }
 
-.about h3{
-  font-family: "PT_Sans_Bold";
-  font-size: 28px;
-  line-height: 37px;
-  color: #BCBCBC;
-}
-
-.about h4 {
-  font-family: "Open_Sans_Regular";
-  font-size: 46px;
-  line-height: 52px;
-  color: #383838;
-  margin-top: 16px;
-  margin-bottom: 56px;
-}
-
-.about span {
-  font-family: "PT_Sans_Bold";
-}
-
 .about p {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -269,4 +279,207 @@
   text-decoration: none;
   transition: 0.5s;
 
+}
+
+iframe {
+  margin-top: 50px;
+}
+
+
+/* ---------- DELIVERY ---------- */
+
+.delivery {
+  position: relative;
+  background: #E8F2F6;
+  padding: 40px;
+}
+
+.delivery-title {
+  position: absolute;
+  margin-top: 30px;
+}
+
+.pulseAnim {
+	fill: #EB7F00;
+	transform-origin: 50% 50%;
+	animation: pulse 4000ms ease-in infinite both;
+}
+
+.dotted-map {
+	fill: #FFFFFF;
+	fill-rule: nonzero;
+}
+
+@keyframes pulse {
+	0% {
+		r: 5;
+		opacity: 1;
+	}
+	50%,
+	70% {
+		r: 7;
+		opacity: 1;
+	}
+	100% {
+		r: 5;
+		opacity: 1;
+	}
+}
+
+
+/* ---------- COOPERATION ---------- */
+
+.cooperation-title {
+  margin-top: 70px;
+}
+
+.col {
+  padding: 0;
+}
+.svg-block {
+  padding: 40px;
+  text-align: center;
+}
+
+.svg-block h5 {
+  font-size: 16px;
+  margin-bottom: 45px;
+}
+
+.svg-block path {
+  transition: 0.6s;
+}
+
+.icon-circles {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.circle-1, .circle-2, .circle-3, .circle-4, .circle-5 {
+  margin: 50px auto;
+}
+
+.line {
+  position: absolute;
+  background:#225378;
+  height: 5px;
+  width: 100%;
+  top: 128px;
+  left: 55%;
+  z-index: -1; 
+  transition: 0.6s;
+}
+
+.circle-1 {
+  width: 30px;
+  height: 30px;
+  background: #EB7F00;
+  border-radius: 50%;
+  z-index: 99;
+  transition: 0.6s;
+
+}
+.circle-2 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+  transition: 0.6s;
+
+}
+.circle-3 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+  transition: 0.6s;
+
+}
+.circle-4 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+  transition: 0.6s;
+
+}
+.circle-5 {
+  width: 30px;
+  height: 30px;
+  background: #225378;
+  border-radius: 50%;
+  z-index: 99;
+  transition: 0.6s;
+
+}
+
+.buttons-cooperation {
+  margin-top: 30px;
+}
+
+
+/* ---------- NEWS ---------- */
+
+.news-title {
+  margin-top: 50px;
+}
+
+.news img {
+  width: 100%;
+}
+
+.new-prev {
+  height: 427px;
+  box-shadow: 2px 2px 10px rgba(162, 162, 162, 0.5);
+  
+}
+
+.new-prev-content {
+  padding: 15px;
+}
+
+.post-title{
+  font-family: "Open_Sans_SemiBold";
+  font-size: 22px;
+  line-height: 30px;
+  color: #333333;
+}
+
+.post-data {
+  font-family: "Open_Sans_Regular";
+  font-size: 10px;
+  line-height: 14px;
+  color: #8B8B8B;
+}
+
+.post-text {
+  font-family: "Open_Sans_Regular";
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+}
+
+.post-button {
+  font-size: 14px;
+  line-height: 19px;
+  color: #225378;
+  border-bottom: 2px solid #EB7F00;
+  
+}
+
+.post-button:hover {
+  color: #225378;
+  text-decoration:none;
+  border: none;
+}
+
+.button-all-news {
+  text-align: right;
+  padding: 15px;
+  font-family: "Open_Sans_SemiBold";
 }
