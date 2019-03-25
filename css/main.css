@@ -1,4 +1,4 @@
-h3{
+h3 {
   font-family: "PT_Sans_Bold";
   font-size: 28px;
   line-height: 37px;
@@ -23,12 +23,6 @@ h5 {
 span {
   font-family: "PT_Sans_Bold";
 }
-
-
-
-
-
-
 
 /* ---------- MENU ---------- */
 
@@ -55,18 +49,16 @@ span {
   color: #225378;
   text-decoration: none;
   position: relative;
-
 }
 
-.nav a:hover:after{
+.nav a:hover:after {
   content: '';
-  position: absolute; 
-  bottom: -2px; 
+  position: absolute;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 2px;
-  background: #EB7F00; 
-  
+  background: #EB7F00;
 }
 
 .menu-contacts a {
@@ -91,7 +83,6 @@ span {
   padding: 31px 16px 31px 16px;
   background: #EB7F00;
   text-align: center;
-  
 }
 
 .menu-button a:hover {
@@ -100,14 +91,12 @@ span {
 }
 
 
-
 /* ---------- HERO ---------- */
 
 .hero {
   background: url(../img/sadok-1.png) no-repeat;
   background-size: cover;
   height: 834px;
-  
 }
 
 .hero-title {
@@ -153,7 +142,6 @@ span {
   color: #333333;
   text-decoration: none;
   transition: 0.5s;
-
 }
 
 .hidden-block {
@@ -164,7 +152,6 @@ span {
   color: #FFFFFF;
   padding-left: 60%;
   padding-top: 15%
-  
 }
 
 .hidden-block h2 {
@@ -198,7 +185,6 @@ span {
   color: #333333;
   text-decoration: none;
   transition: 0.5s;
-
 }
 
 
@@ -211,16 +197,14 @@ span {
   background: #FFFFFF;
   box-shadow: 5px 5px 12px rgba(174, 174, 174, 0.5);
 }
+
 .features-block {
   min-height: 328px;
   padding: 30px;
-  
-  
 }
 
 .features-block img {
   height: 50px;
-  
 }
 
 .features-block h4 {
@@ -272,7 +256,7 @@ span {
   border-radius: 26px;
   padding: 13px 41px 13px 41px;
   text-align: center;
-  
+
 }
 
 .about-button:hover {
@@ -302,30 +286,32 @@ iframe {
 }
 
 .pulseAnim {
-	fill: #EB7F00;
-	transform-origin: 50% 50%;
-	animation: pulse 4000ms ease-in infinite both;
+  fill: #EB7F00;
+  transform-origin: 50% 50%;
+  animation: pulse 4000ms ease-in infinite both;
 }
 
 .dotted-map {
-	fill: #FFFFFF;
-	fill-rule: nonzero;
+  fill: #FFFFFF;
+  fill-rule: nonzero;
 }
 
 @keyframes pulse {
-	0% {
-		r: 5;
-		opacity: 1;
-	}
-	50%,
-	70% {
-		r: 7;
-		opacity: 1;
-	}
-	100% {
-		r: 5;
-		opacity: 1;
-	}
+  0% {
+    r: 5;
+    opacity: 1;
+  }
+
+  50%,
+  70% {
+    r: 7;
+    opacity: 1;
+  }
+
+  100% {
+    r: 5;
+    opacity: 1;
+  }
 }
 
 
@@ -338,6 +324,7 @@ iframe {
 .col {
   padding: 0;
 }
+
 .svg-block {
   padding: 40px;
   text-align: center;
@@ -356,21 +343,24 @@ iframe {
   position: relative;
   display: flex;
   justify-content: center;
-  
 }
 
-.circle-1, .circle-2, .circle-3, .circle-4, .circle-5 {
+.circle-1,
+.circle-2,
+.circle-3,
+.circle-4,
+.circle-5 {
   margin: 50px auto;
 }
 
 .line {
   position: absolute;
-  background:#225378;
+  background: #225378;
   height: 5px;
   width: 100%;
   top: 128px;
   left: 55%;
-  z-index: -1; 
+  z-index: -1;
   transition: 0.6s;
 }
 
@@ -383,6 +373,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-2 {
   width: 30px;
   height: 30px;
@@ -392,6 +383,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-3 {
   width: 30px;
   height: 30px;
@@ -401,6 +393,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-4 {
   width: 30px;
   height: 30px;
@@ -410,6 +403,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-5 {
   width: 30px;
   height: 30px;
@@ -417,7 +411,6 @@ iframe {
   border-radius: 50%;
   z-index: 99;
   transition: 0.6s;
-
 }
 
 .buttons-cooperation {
@@ -438,14 +431,13 @@ iframe {
 .new-prev {
   height: 427px;
   box-shadow: 2px 2px 10px rgba(162, 162, 162, 0.5);
-  
 }
 
 .new-prev-content {
   padding: 15px;
 }
 
-.post-title{
+.post-title {
   font-family: "Open_Sans_SemiBold";
   font-size: 22px;
   line-height: 30px;
@@ -471,12 +463,11 @@ iframe {
   line-height: 19px;
   color: #225378;
   border-bottom: 2px solid #EB7F00;
-  
 }
 
 .post-button:hover {
   color: #225378;
-  text-decoration:none;
+  text-decoration: none;
   border: none;
 }
 
@@ -493,7 +484,9 @@ iframe {
   padding: 0;
   margin: 0;
 }
-.contacts img, .contacts-title{
+
+.contacts img,
+.contacts-title {
   display: inline;
 }
 
@@ -501,11 +494,13 @@ iframe {
   width: 35px;
   height: 35px;
 }
+
 .form-block {
   height: 680px;
   padding: 30px;
   background: url(../img/bg-form.png);
 }
+
 .form-title h3 {
   font-family: "PT_Sans_Regular";
   font-size: 46px;
@@ -519,13 +514,13 @@ iframe {
   line-height: 52px;
   color: #383838;
 }
+
 .contacts-list {
   height: 680px;
   padding: 70px;
   position: relative;
   background: url(../img/bg-contact.png);
   z-index: -1;
-  
 }
 
 .bg-layout {
@@ -538,8 +533,6 @@ iframe {
   mix-blend-mode: normal;
   opacity: 0.79;
   z-index: -1;
-  
-
 }
 
 .contacts-block {
@@ -554,7 +547,7 @@ iframe {
   margin-left: 15px;
 }
 
-.contacts-text{
+.contacts-text {
   font-family: "Open_Sans_Regular";
   font-size: 18px;
   line-height: 24px;
@@ -562,6 +555,7 @@ iframe {
   margin-left: 55px;
   max-width: 350px;
 }
+
 .contacts input {
   margin: 30px auto;
   display: block;
@@ -585,6 +579,7 @@ iframe {
   color: #C5C5C5;
   padding: 5px;
 }
+
 ::-moz-placeholder {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -592,13 +587,16 @@ iframe {
   color: #C5C5C5;
   padding: 5px;
 }
+
 :-moz-placeholder {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
-}/* Firefox 18- */
+}
+
+/* Firefox 18- */
 :-ms-input-placeholder {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -614,6 +612,7 @@ iframe {
   color: #C5C5C5;
   padding: 5px;
 }
+
 ::-moz-placeholder {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -621,13 +620,16 @@ iframe {
   color: #C5C5C5;
   padding: 5px;
 }
+
 :-moz-placeholder {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
-}/* Firefox 18- */
+}
+
+/* Firefox 18- */
 :-ms-input-placeholder {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -659,7 +661,6 @@ iframe {
   border-radius: 26px;
   padding: 13px 41px 13px 41px;
   text-align: center;
-  
 }
 
 .button-send:hover {
@@ -667,7 +668,6 @@ iframe {
   color: #FFFFFF;
   text-decoration: none;
   transition: 0.5s;
-
 }
 
 
@@ -702,15 +702,14 @@ iframe {
 }
 
 
-.footer-item a:hover:after{
+.footer-item a:hover:after {
   content: '';
-  position: absolute; 
-  bottom: -2px; 
+  position: absolute;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 1px;
-  background: #383838; 
-  
+  background: #383838;
 }
 
 .footer-text {
@@ -718,4 +717,19 @@ iframe {
   font-size: 10px;
   line-height: 13px;
   color: #383838;
+}
+
+/* ---------- PARALLAX ---------- */
+ .parallax {
+  background-image: url(../img/parallax/Artboard.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  color: #fff;
+  font-family: "PT_Sans_Regular";
+} 
+
+.parallax .parallax-container {
+  height: 100vh;
 }

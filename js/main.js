@@ -1,7 +1,12 @@
 $(document).ready(function () {
   $(".hero-button").click(function () {
-    $("#hidden").slideToggle(600);
-    return false;
+    if ($(".hero-button").hasClass('active')) {
+      console.log($(".hero-button").hasClass('active'));
+      return false;
+    } else {
+      $(".hero-button").addClass('active');
+      $("#hidden").slideToggle(600);
+    }
   });
 });
 
