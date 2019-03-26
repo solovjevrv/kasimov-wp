@@ -737,7 +737,10 @@ iframe {
 .parallax .parallax-container .text {
   padding-right: 70px;
   text-align: center;
-  padding-top: 18%;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%) !important;
 }
 
 .parallax .parallax-container .text h3 {

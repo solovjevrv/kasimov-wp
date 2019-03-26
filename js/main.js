@@ -1,4 +1,21 @@
 $(document).ready(function () {
+  
+  // Инициализация плагина Анимации
+  AOS.init({
+    mirror: true
+  });
+
+  document.addEventListener('aos:in', ({ detail }) => {
+    console.log('animated in', detail);
+  });
+
+  document.addEventListener('aos:out', ({ detail }) => {
+    console.log('animated out', detail);
+  });
+
+  // PARALLAX
+  //$(".text").stick_in_parent();
+
 
   $(".hero-button").click(function () {
     if ($(".hero-button").hasClass('active')) {
@@ -96,10 +113,9 @@ $(document).ready(function () {
     $(".step-4 .line").css("background", "#225378");
   });
 
-  // PARALLAX
-  $("#sidebar").stick_in_parent();
 });
 
+// Действия при ресайзе страницы
 $(window).on("resize", (function(_this) {
   return function(e) {
     return $(document.body).trigger("sticky_kit:recalc");
