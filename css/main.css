@@ -1,5 +1,10 @@
-h3 {
-  font-family: "PT_Sans_Bold";
+html {
+  scroll-behavior: smooth;
+}
+
+h3{
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 28px;
   line-height: 37px;
   color: #BCBCBC;
@@ -15,14 +20,13 @@ h4 {
 }
 
 h5 {
+  font-family: "Open_Sans_Regular";
+  font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   color: #383838;
 }
 
-span {
-  font-family: "PT_Sans_Bold";
-}
 
 .visible {
   visibility: visible;
@@ -31,7 +35,7 @@ span {
 /* ---------- MENU ---------- */
 
 .menu-row {
-  height: 85px;
+  height: 100px;
   color: #225378;
   display: flex;
   justify-content: space-between;
@@ -47,7 +51,8 @@ span {
 }
 
 .nav a {
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 18px;
   line-height: 23px;
   color: #225378;
@@ -71,14 +76,15 @@ span {
   font-size: 18px;
   line-height: 23px;
   color: #225378;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px;
+ 
 }
 
 .menu-button a {
   display: block;
   height: 100%;
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   color: #ffffff;
   font-size: 18px;
   line-height: 23px;
@@ -94,8 +100,15 @@ span {
   transition: 0.5s;
 }
 
+.menu-button img {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 20px;
+}
+
 
 /* ---------- HERO ---------- */
+
 
 .hero {
   background: url(../img/sadok-1.png) no-repeat;
@@ -109,7 +122,8 @@ span {
 }
 
 .hero-title h1 {
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 65px;
   line-height: 84px;
   letter-spacing: 2.87857px;
@@ -128,7 +142,8 @@ span {
   margin: 20px auto;
   display: block;
   width: 193px;
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
@@ -159,7 +174,8 @@ span {
 }
 
 .hidden-block h2 {
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 40px;
   line-height: 60px;
 }
@@ -171,7 +187,8 @@ span {
 
 .hidden-button {
   width: 193px;
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
@@ -194,6 +211,8 @@ span {
 
 
 /* ---------- FEATURES ---------- */
+
+
 .features-container {
   margin: -70px auto;
   width: 90%;
@@ -202,9 +221,24 @@ span {
   box-shadow: 5px 5px 12px rgba(174, 174, 174, 0.5);
 }
 
+.features-container .col-lg-3, .col-md-6 {
+  padding: 0;
+}
+
+
 .features-block {
-  min-height: 328px;
+  height: 46vh;
   padding: 30px;
+  position: relative;
+}
+
+.decor-line {
+  background: #E3E3E3;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0%;
+  right: 0%;
 }
 
 .features-block img {
@@ -214,7 +248,8 @@ span {
 .features-block h4 {
   margin-top: 35px;
   margin-bottom: 25px;
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 20px;
   line-height: 23px;
   color: #383838;
@@ -238,7 +273,13 @@ span {
   width: 100%;
   height: 423px;
 }
-
+.about span {
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+}
 .about p {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -249,16 +290,18 @@ span {
 
 .about-button {
   width: 193px;
-  font-family: "PT_Sans_Bold";
+  height: 57px;
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
   background: #EB7F00;
-  box-shadow: 5px 6px 9px rgba(105, 105, 105, 0.5);
-  border-radius: 26px;
-  padding: 13px 41px 13px 41px;
+  box-shadow: 4px 4px 11px rgba(174, 174, 174, 0.5);
+  border-radius: 28.5px;
+  padding: 18px 35px 18px 35px;
   text-align: center;
 
 }
@@ -287,6 +330,14 @@ iframe {
 .delivery-title {
   position: absolute;
   margin-top: 30px;
+}
+
+.delivery span {
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
 }
 
 .pulseAnim {
@@ -324,7 +375,17 @@ iframe {
 .cooperation-title {
   margin-top: 70px;
 }
+.cooperation span {
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+}
 
+.step-1, .step-2, .step-3, .step-4, .step-5 {
+  cursor: pointer;
+}
 .col {
   padding: 0;
 }
@@ -335,7 +396,9 @@ iframe {
 }
 
 .svg-block h5 {
-  font-size: 16px;
+  font-family: "Open_Sans_Regular";
+  font-weight: bold;
+  font-size: 18px;
   margin-bottom: 45px;
 }
 
@@ -441,8 +504,9 @@ iframe {
   padding: 15px;
 }
 
-.post-title {
-  font-family: "Open_Sans_SemiBold";
+.post-title{
+  font-family: "Open_Sans_Regular";
+  font-weight: bold;
   font-size: 22px;
   line-height: 30px;
   color: #333333;
@@ -479,11 +543,18 @@ iframe {
   text-align: right;
   padding: 15px;
   margin-bottom: 50px;
-  font-family: "Open_Sans_SemiBold";
+  font-family: "Open_Sans_Regular";
+  font-weight: bold;
 }
 
 /* ---------- NEWS ---------- */
-
+.news h4 {
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+}
 .contacts .col-lg-6 {
   padding: 0;
   margin: 0;
@@ -513,7 +584,8 @@ iframe {
 }
 
 .form-title span {
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 46px;
   line-height: 52px;
   color: #383838;
@@ -542,13 +614,28 @@ iframe {
 .contacts-block {
   padding: 35px 0px 35px 0px;
 }
+.contacts h3 {
+  font-family: "PT_Sans_Regular";
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+}
+
+.contacts h2 {
+  font-family: "PT_Sans_Regular";
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+}
 
 .contacts-title {
-  font-family: "Open_Sans_SemiBold";
+  font-family: "Open_Sans_Regular";
+  font-weight: bold;
   font-size: 20px;
   line-height: 27px;
   color: #FFFFFF;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .contacts-text {
@@ -654,7 +741,8 @@ iframe {
   display: block;
   margin: 0 auto;
   width: 193px;
-  font-family: "PT_Sans_Bold";
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -685,6 +773,7 @@ iframe {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   width: 20%;
   margin: 22px auto;
 
