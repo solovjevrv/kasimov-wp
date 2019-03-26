@@ -24,6 +24,10 @@ span {
   font-family: "PT_Sans_Bold";
 }
 
+.visible {
+  visibility: visible;
+}
+
 /* ---------- MENU ---------- */
 
 .menu-row {
@@ -754,4 +758,16 @@ iframe {
   position: fixed;
   top: 50%;
   transform: translateY(-50%) !important;
+}
+
+.about .container .row * {
+  z-index: 1;
+}
+
+#parallax-container-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) !important;
+  visibility: hidden;
 }

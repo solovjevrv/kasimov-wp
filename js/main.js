@@ -5,19 +5,17 @@ $(document).ready(function () {
     mirror: true
   });
 
-  document.addEventListener('aos:in', ({ detail }) => {
-    console.log('animated in', detail);
+  document.addEventListener('aos:in:start', ({ detail }) => {
+    console.log('aos:in:start');
     $('.parallax .parallax-container .text').addClass('parallax-active-text');
+    $('#parallax-container-text').addClass('visible');
   });
 
-  document.addEventListener('aos:out', ({ detail }) => {
-    console.log('animated out', detail);
+  document.addEventListener('aos:out:finish', ({ detail }) => {
+    console.log('aos:out:finish');
     $('.parallax .parallax-container .text').removeClass('parallax-active-text');
+    $('#parallax-container-text').removeClass('visible');
   });
-
-  // PARALLAX
-  //$(".text").stick_in_parent();
-
 
   $(".hero-button").click(function () {
     if ($(".hero-button").hasClass('active')) {
