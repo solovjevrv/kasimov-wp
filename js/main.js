@@ -1,20 +1,60 @@
 $(document).ready(function () {
-  
+
   // Инициализация плагина Анимации
   AOS.init({
-    mirror: true
+    once: false,
+    mirror: true,
+    throttleDelay: 99,
+    offset: 250
   });
 
-  document.addEventListener('aos:in:start', ({ detail }) => {
-    console.log('aos:in:start');
-    $('.parallax .parallax-container .text').addClass('parallax-active-text');
-    $('#parallax-container-text').addClass('visible');
+  let lastMouseWheelEvent;
+  $(document).on('mousewheel', function (e) {
+    if ( e.originalEvent.deltaY > 0) {
+      lastMouseWheelEvent = "down";
+    } else {
+      lastMouseWheelEvent = "up";
+    }
   });
 
-  document.addEventListener('aos:out:finish', ({ detail }) => {
-    console.log('aos:out:finish');
-    $('.parallax .parallax-container .text').removeClass('parallax-active-text');
-    $('#parallax-container-text').removeClass('visible');
+  function makeParallaxOn() {
+    let lastSlide = 0;
+
+    return function parallaxOn(slide, type) {
+      let currentSlide = slide;
+      let result = "parallaxOn: NOT";
+
+      if (type === "in" && (lastSlide === currentSlide || lastSlide === 0)) {
+        result = "parallaxOn: ON";
+        $('.parallax .parallax-container .text').addClass('parallax-active-text');
+        $('#parallax-container-text').addClass('visible');
+      } else if (type === "out" && ((lastSlide === 1 && currentSlide === 1 && lastMouseWheelEvent === "up") || (lastSlide === 3 && currentSlide === 3 && lastMouseWheelEvent === "down"))) {
+        result = "parallaxOn: OFF";
+        $('.parallax .parallax-container .text').removeClass('parallax-active-text');
+        $('#parallax-container-text').removeClass('visible');
+      }
+
+      result = result + " type: " + type + " current: " + currentSlide + " last: " + lastSlide + " lastMouseWheelEvent: " + lastMouseWheelEvent;
+      lastSlide = currentSlide;
+
+      return result;
+    }
+  }
+
+  let parallaxOn = makeParallaxOn();
+
+  document.addEventListener('aos:in', ({
+    detail
+  }) => {
+    parallaxOn($(detail).data("aos-id"), "in");
+    // console.log(parallaxOn($(detail).data("aos-id"), "in"));
+  });
+
+  document.addEventListener('aos:out', ({
+    detail
+  }) => {
+    parallaxOn($(detail).data("aos-id"), "out");
+    // console.log(parallaxOn($(detail).data("aos-id"), "out"));
   });
 
   $(".hero-button").click(function () {
@@ -116,8 +156,8 @@ $(document).ready(function () {
 });
 
 // Действия при ресайзе страницы
-$(window).on("resize", (function(_this) {
-  return function(e) {
+$(window).on("resize", (function (_this) {
+  return function (e) {
     return $(document.body).trigger("sticky_kit:recalc");
   };
 })(this));
