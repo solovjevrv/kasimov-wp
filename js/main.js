@@ -5,6 +5,7 @@ $(document).ready(function () {
   });
 });
 
+
 $(document).ready(function () { // for Step-2
   $(".step-2").mouseover(function () {
     $(".step-2 path").css("fill", "#EB7F00");

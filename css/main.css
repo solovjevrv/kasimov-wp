@@ -1,8 +1,11 @@
 html {
   scroll-behavior: smooth;
 }
-
-h3{
+.body {
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+h3 {
   font-family: "PT_Sans_Regular";
   font-weight: bold;
   font-size: 28px;
@@ -60,18 +63,16 @@ h5 {
   color: #225378;
   text-decoration: none;
   position: relative;
-
 }
 
-.nav a:hover:after{
+.nav a:hover:after {
   content: '';
-  position: absolute; 
-  bottom: -2px; 
+  position: absolute;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 2px;
-  background: #EB7F00; 
-  
+  background: #EB7F00;
 }
 
 .menu-contacts a {
@@ -81,7 +82,6 @@ h5 {
   line-height: 23px;
   color: #225378;
   margin: 20px;
- 
 }
 
 .menu-button a {
@@ -97,7 +97,6 @@ h5 {
   padding: 31px 16px 31px 16px;
   background: #EB7F00;
   text-align: center;
-  
 }
 
 .menu-button a:hover {
@@ -116,23 +115,33 @@ h5 {
 .hero {
   background: url(../img/sadok-1.png) no-repeat;
   background-size: cover;
-  height: 834px;
-  
+  padding: 10% 0% 30% 0%;
+  width: 100%;
+}
+
+.hidden-block {
+  width: 100%;
+  background: url(../img/sadok-2.png) no-repeat;
+  background-size: cover;
+  display: none;
+  color: #FFFFFF;
+  padding: 15% 0% 28% 0%;
+  margin-top: -2px;
 }
 
 .hero-title {
-  padding-top: 10vw;
   text-align: center;
 }
 
 .hero-title h1 {
   font-family: "PT_Sans_Regular";
   font-weight: bold;
-  font-size: 65px;
+  font-size: 72px;
   line-height: 84px;
-  letter-spacing: 2.87857px;
+  letter-spacing: 2.5;
   text-transform: uppercase;
   color: #FFFFFF;
+
 }
 
 .hero-title span {
@@ -140,6 +149,7 @@ h5 {
   font-size: 26px;
   line-height: 33px;
   color: #FFFFFF;
+
 }
 
 .hero-button {
@@ -165,18 +175,6 @@ h5 {
   color: #333333;
   text-decoration: none;
   transition: 0.5s;
-
-}
-
-.hidden-block {
-  background: url(../img/sadok-2.png) no-repeat;
-  background-size: cover;
-  height: 953px;
-  display: none;
-  color: #FFFFFF;
-  padding-left: 60%;
-  padding-top: 15%
-  
 }
 
 .hidden-block h2 {
@@ -184,14 +182,19 @@ h5 {
   font-weight: bold;
   font-size: 40px;
   line-height: 60px;
+  text-align: center;
 }
 
 .hidden-block p {
+  text-align: center;
   width: 50%;
-  margin-bottom: 50px;
+  height: 100px;
+  margin: 50px auto;
 }
 
 .hidden-button {
+  display: block;
+  margin: 0 auto;
   width: 193px;
   font-family: "PT_Sans_Regular";
   font-weight: bold;
@@ -205,6 +208,7 @@ h5 {
   border-radius: 26px;
   padding: 13px 41px 13px 41px;
   text-align: center;
+
 }
 
 .hidden-button:hover {
@@ -212,7 +216,6 @@ h5 {
   color: #333333;
   text-decoration: none;
   transition: 0.5s;
-
 }
 
 
@@ -228,16 +231,15 @@ h5 {
   box-shadow: 5px 5px 12px rgba(174, 174, 174, 0.5);
 }
 
-.features-container .col-lg-3, .col-md-6 {
+.features-container .col-lg-3,
+.col-md-6 {
   padding: 0;
-  
 }
 
 .features-block {
   height: 46vh;
   padding: 30px;
   position: relative;
-
 }
 
 .decor-line {
@@ -247,12 +249,10 @@ h5 {
   width: 1px;
   top: 0%;
   right: 0%;
-  
 }
 
 .features-block img {
   height: 50px;
-  
 }
 
 .features-block h4 {
@@ -283,6 +283,7 @@ h5 {
   width: 100%;
   height: 423px;
 }
+
 .about span {
   font-family: "PT_Sans_Regular";
   font-weight: bold;
@@ -290,6 +291,7 @@ h5 {
   line-height: 52px;
   color: #383838;
 }
+
 .about p {
   font-family: "Open_Sans_Regular";
   font-size: 16px;
@@ -313,7 +315,6 @@ h5 {
   border-radius: 28.5px;
   padding: 18px 35px 18px 35px;
   text-align: center;
-  
 }
 
 .about-button:hover {
@@ -351,30 +352,32 @@ iframe {
 }
 
 .pulseAnim {
-	fill: #EB7F00;
-	transform-origin: 50% 50%;
-	animation: pulse 4000ms ease-in infinite both;
+  fill: #EB7F00;
+  transform-origin: 50% 50%;
+  animation: pulse 4000ms ease-in infinite both;
 }
 
 .dotted-map {
-	fill: #FFFFFF;
-	fill-rule: nonzero;
+  fill: #FFFFFF;
+  fill-rule: nonzero;
 }
 
 @keyframes pulse {
-	0% {
-		r: 5;
-		opacity: 1;
-	}
-	50%,
-	70% {
-		r: 7;
-		opacity: 1;
-	}
-	100% {
-		r: 5;
-		opacity: 1;
-	}
+  0% {
+    r: 5;
+    opacity: 1;
+  }
+
+  50%,
+  70% {
+    r: 7;
+    opacity: 1;
+  }
+
+  100% {
+    r: 5;
+    opacity: 1;
+  }
 }
 
 
@@ -383,6 +386,7 @@ iframe {
 .cooperation-title {
   margin-top: 70px;
 }
+
 .cooperation span {
   font-family: "PT_Sans_Regular";
   font-weight: bold;
@@ -391,12 +395,18 @@ iframe {
   color: #383838;
 }
 
-.step-1, .step-2, .step-3, .step-4, .step-5 {
+.step-1,
+.step-2,
+.step-3,
+.step-4,
+.step-5 {
   cursor: pointer;
 }
+
 .col {
   padding: 0;
 }
+
 .svg-block {
   padding: 40px;
   text-align: center;
@@ -417,21 +427,25 @@ iframe {
   position: relative;
   display: flex;
   justify-content: center;
-  
+
 }
 
-.circle-1, .circle-2, .circle-3, .circle-4, .circle-5 {
+.circle-1,
+.circle-2,
+.circle-3,
+.circle-4,
+.circle-5 {
   margin: 50px auto;
 }
 
 .line {
   position: absolute;
-  background:#225378;
+  background: #225378;
   height: 5px;
   width: 100%;
   top: 128px;
   left: 55%;
-  z-index: -1; 
+  z-index: -1;
   transition: 0.6s;
 }
 
@@ -444,6 +458,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-2 {
   width: 30px;
   height: 30px;
@@ -453,6 +468,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-3 {
   width: 30px;
   height: 30px;
@@ -462,6 +478,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-4 {
   width: 30px;
   height: 30px;
@@ -471,6 +488,7 @@ iframe {
   transition: 0.6s;
 
 }
+
 .circle-5 {
   width: 30px;
   height: 30px;
@@ -486,27 +504,65 @@ iframe {
 }
 
 
+.cooperation-button {
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #EB7F00;
+  box-shadow: 4px 4px 11px rgba(174, 174, 174, 0.5);
+  border-radius: 28.5px;
+  padding: 8px 27px 8px 27px;
+  text-align: center;
+
+}
+
+.cooperation-button:hover {
+  background: #225378;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.5s;
+
+}
+
 /* ---------- NEWS ---------- */
 
 .news-title {
   margin-top: 50px;
 }
 
+.news .col-lg-6,
+.col-md-12 {
+  padding: 0;
+}
+
 .news img {
   width: 100%;
+  height: 180px;
+  transition: all 0.5s;
+}
+
+.news img:hover {
+  transform: scale(1.04)
 }
 
 .new-prev {
-  height: 427px;
+  margin: 10px;
+  padding-bottom: 15px;
+  min-height: 450px;
   box-shadow: 2px 2px 10px rgba(162, 162, 162, 0.5);
-  
+
 }
 
 .new-prev-content {
+  min-height: 240px;
   padding: 15px;
 }
 
-.post-title{
+.post-title {
   font-family: "Open_Sans_Regular";
   font-weight: bold;
   font-size: 22px;
@@ -529,17 +585,21 @@ iframe {
 }
 
 .post-button {
+  position: relative;
   font-size: 14px;
   line-height: 19px;
   color: #225378;
-  border-bottom: 2px solid #EB7F00;
-  
+  text-decoration: none;
+  border-bottom: #EB7F00 2px solid;
+  transition: all 0.4s;
+  margin-left: 15px;
+
 }
 
 .post-button:hover {
-  color: #225378;
-  text-decoration:none;
-  border: none;
+  color: #EB7F00;
+  text-decoration: none;
+
 }
 
 .button-all-news {
@@ -558,11 +618,14 @@ iframe {
   line-height: 52px;
   color: #383838;
 }
+
 .contacts .col-lg-6 {
   padding: 0;
   margin: 0;
 }
-.contacts img, .contacts-title{
+
+.contacts img,
+.contacts-title {
   display: inline;
 }
 
@@ -570,11 +633,17 @@ iframe {
   width: 35px;
   height: 35px;
 }
+
 .form-block {
-  height: 680px;
-  padding: 30px;
+  height: 755px;
+  padding: 3%;
   background: url(../img/bg-form.png);
 }
+
+.form-title {
+  padding-bottom: 7%;
+}
+
 .form-title h3 {
   font-family: "PT_Sans_Regular";
   font-size: 46px;
@@ -589,18 +658,20 @@ iframe {
   line-height: 52px;
   color: #383838;
 }
+
 .contacts-list {
-  height: 680px;
-  padding: 70px;
+  height: 755px;
+  padding: 12% 25% 10% 25%;
   position: relative;
-  background: url(../img/bg-contact.png);
+  background: url(../img/bg-contact.png) no-repeat;
+  background-size: cover;
   z-index: -1;
-  
+
 }
 
 .bg-layout {
   width: 100%;
-  height: 680px;
+  height: 755px;
   top: 0%;
   left: 0%;
   position: absolute;
@@ -608,13 +679,14 @@ iframe {
   mix-blend-mode: normal;
   opacity: 0.79;
   z-index: -1;
-  
+
 
 }
 
 .contacts-block {
   padding: 35px 0px 35px 0px;
 }
+
 .contacts h3 {
   font-family: "PT_Sans_Regular";
   font-size: 46px;
@@ -637,56 +709,65 @@ iframe {
   line-height: 27px;
   color: #FFFFFF;
   margin-left: 20px;
+  padding-bottom: 40px;
+
 }
 
-.contacts-text{
+.contacts-text {
   font-family: "Open_Sans_Regular";
   font-size: 18px;
   line-height: 24px;
   color: #FFFFFF;
   margin-left: 55px;
+  margin-bottom: 5px;
   max-width: 350px;
 }
+
 .contacts input {
-  margin: 30px auto;
+  margin: 40px auto;
   display: block;
   resize: none;
   width: 90%;
   height: 50px;
+  border: none;
 }
 
 .contacts textarea {
-  margin: 30px auto;
+  margin: 40px auto;
   display: block;
   resize: none;
   width: 90%;
   height: 180px;
+  border: none;
 }
 
 .contacts textarea::-webkit-input-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
 }
+
 ::-moz-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
 }
+
 :-moz-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
-}/* Firefox 18- */
+}
+
 :-ms-input-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
@@ -694,28 +775,32 @@ iframe {
 
 .contacts input::-webkit-input-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
 }
+
 ::-moz-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
 }
+
 :-moz-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
-}/* Firefox 18- */
+}
+
+/* Firefox 18- */
 :-ms-input-placeholder {
   font-family: "Open_Sans_Regular";
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   color: #C5C5C5;
   padding: 5px;
@@ -736,16 +821,25 @@ iframe {
   font-family: "PT_Sans_Regular";
   font-weight: bold;
   font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  line-height: 22px;
   text-decoration: none;
   color: #FFFFFF;
   background: #EB7F00;
   box-shadow: 5px 6px 9px rgba(105, 105, 105, 0.5);
   border-radius: 26px;
   padding: 13px 41px 13px 41px;
-  text-align: center;
-  
+  position: relative;
+
+}
+
+.button-send img {
+  height: 20px;
+  top: 50%;
+  margin-top: -12px;
+  right: 50%;
+  margin-right: -70px;
+  position: absolute;
+  display: inline;
 }
 
 .button-send:hover {
@@ -768,13 +862,14 @@ iframe {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 20%;
+  width: 25%;
   margin: 22px auto;
 
 }
 
 .footer-item {
   display: inline-block;
+  margin: 5px;
 
 }
 
@@ -789,15 +884,15 @@ iframe {
 }
 
 
-.footer-item a:hover:after{
+.footer-item a:hover:after {
   content: '';
-  position: absolute; 
-  bottom: -2px; 
+  position: absolute;
+  bottom: -2px;
   left: 0;
   width: 100%;
   height: 1px;
-  background: #383838; 
-  
+  background: #383838;
+
 }
 
 .footer-text {
@@ -805,4 +900,69 @@ iframe {
   font-size: 10px;
   line-height: 13px;
   color: #383838;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media screen and (max-width: 1200px) {
+
+  .desktop-nav,
+  .menu-contacts,
+  .menu-button {
+    display: none;
+  }
+
+  .hidden-block {
+    padding: 9% 0% 32% 0%;
+   
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hidden-block {
+    padding: 5% 0% 35% 0%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hidden-block {
+    padding: 5% 0% 33% 0%;
+  }
+  .hero-title h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .hero-title h1 {
+    font-size: 42px;
+  }
+  .hero-title span {
+    font-size: 22px;
+  }
+  .hero {
+    background: url(../img/sadok-1.png) no-repeat;
+    background-size: cover;
+    padding: 5% 0% 15% 0%;
+  }
+  .hidden-block {
+    width: 100%;
+    background: url(../img/sadok-2.png) no-repeat;
+    background-size: cover;
+    padding: 4% 0% 17% 0%;
+  }
+  .hidden-block p {
+    width: 70%;
+    margin: 20px auto;
+  }
+
+  .features-container {
+    margin: -30px auto;
+  }
+  .hidden-block h2 {
+    font-size: 30px;
+  }
+  .hidden-block p {
+    
+  }
 }
