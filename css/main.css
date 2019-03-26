@@ -720,7 +720,7 @@ iframe {
 }
 
 /* ---------- PARALLAX ---------- */
- .parallax {
+.parallax {
   background-image: url(../img/parallax/Artboard.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -728,8 +728,21 @@ iframe {
   background-size: cover;
   color: #fff;
   font-family: "PT_Sans_Regular";
-} 
+}
 
 .parallax .parallax-container {
   height: 100vh;
+}
+
+.parallax .parallax-container .text {
+  padding-right: 70px;
+  text-align: center;
+  padding-top: 18%;
+}
+
+.parallax .parallax-container .text h3 {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 46px;
+  color: #FFFFFFFF;
 }
