@@ -7,10 +7,12 @@ $(document).ready(function () {
 
   document.addEventListener('aos:in', ({ detail }) => {
     console.log('animated in', detail);
+    $('.parallax .parallax-container .text').addClass('parallax-active-text');
   });
 
   document.addEventListener('aos:out', ({ detail }) => {
     console.log('animated out', detail);
+    $('.parallax .parallax-container .text').removeClass('parallax-active-text');
   });
 
   // PARALLAX
