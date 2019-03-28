@@ -33,11 +33,9 @@ h5 {
 }
 
 
-
-
-
-
-
+.visible {
+  visibility: visible;
+}
 
 /* ---------- MENU ---------- */
 
@@ -159,7 +157,9 @@ h5 {
 
 }
 
+
 /* ---------- HERO ---------- */
+
 
 .hero {
   background: url(../img/sadok-1n.png) no-repeat;
@@ -175,8 +175,6 @@ h5 {
   display: none;
   color: #FFFFFF;
   padding: 15% 0% 20% 0%;
-
-
 }
 
 .hidden-content {
@@ -200,7 +198,6 @@ h5 {
   letter-spacing: 2.5;
   text-transform: uppercase;
   color: #FFFFFF;
-
 }
 
 .hero-title span {
@@ -208,7 +205,6 @@ h5 {
   font-size: 26px;
   line-height: 33px;
   color: #FFFFFF;
-
 }
 
 .hero-button {
@@ -267,7 +263,6 @@ h5 {
   border-radius: 26px;
   padding: 13px 41px 13px 41px;
   text-align: center;
-
 }
 
 .hidden-button:hover {
@@ -276,7 +271,6 @@ h5 {
   text-decoration: none;
   transition: 0.5s;
 }
-
 
 
 /* ---------- FEATURES ---------- */
@@ -294,6 +288,7 @@ h5 {
 .col-md-6 {
   padding: 0;
 }
+
 
 .features-block {
   height: 46vh;
@@ -381,7 +376,6 @@ h5 {
   color: #FFFFFF;
   text-decoration: none;
   transition: 0.5s;
-
 }
 
 iframe {
@@ -390,6 +384,7 @@ iframe {
 
 
 /* ---------- DELIVERY ---------- */
+
 
 .delivery {
   position: relative;
@@ -442,6 +437,7 @@ iframe {
 
 /* ---------- COOPERATION ---------- */
 
+
 .cooperation-title {
   margin-top: 70px;
 }
@@ -486,7 +482,6 @@ iframe {
   position: relative;
   display: flex;
   justify-content: center;
-
 }
 
 .circle-1,
@@ -555,7 +550,6 @@ iframe {
   border-radius: 50%;
   z-index: 99;
   transition: 0.6s;
-
 }
 
 .buttons-cooperation {
@@ -613,7 +607,6 @@ iframe {
   padding-bottom: 15px;
   min-height: 450px;
   box-shadow: 2px 2px 10px rgba(162, 162, 162, 0.5);
-
 }
 
 .new-prev-content {
@@ -658,7 +651,6 @@ iframe {
 .post-button:hover {
   color: #EB7F00;
   text-decoration: none;
-
 }
 
 .button-all-news {
@@ -725,7 +717,6 @@ iframe {
   background: url(../img/bg-contact.png) no-repeat;
   background-size: cover;
   z-index: -1;
-
 }
 
 .bg-layout {
@@ -738,8 +729,6 @@ iframe {
   mix-blend-mode: normal;
   opacity: 0.79;
   z-index: -1;
-
-
 }
 
 .contacts-block {
@@ -888,7 +877,6 @@ iframe {
   border-radius: 26px;
   padding: 13px 41px 13px 41px;
   position: relative;
-
 }
 
 .button-send img {
@@ -903,11 +891,12 @@ iframe {
   color: #FFFFFF;
   text-decoration: none;
   transition: 0.5s;
-
 }
 
 
 /* ---------- FOOTER ---------- */
+
+
 .footer {
   padding: 16px;
   text-align: center;
@@ -921,7 +910,6 @@ iframe {
   width: 25%;
   margin: 22px auto;
   padding: 0;
-
 }
 
 .footer-item {
@@ -949,7 +937,6 @@ iframe {
   width: 100%;
   height: 1px;
   background: #383838;
-
 }
 
 .footer-text {
@@ -959,7 +946,9 @@ iframe {
   color: #383838;
 }
 
+
 /* ---------- RESPONSIVE ---------- */
+
 
 @media (min-width: 1200px) {
   .mobile-nav {
@@ -1055,9 +1044,6 @@ iframe {
   .contacts h2 {
     text-align: center;
   }
-
-
-
 }
 
 @media screen and (max-width: 630px) {
@@ -1091,4 +1077,51 @@ iframe {
     line-height: 46px;
     color: #383838;
   }
+  
+  
+/* ---------- PARALLAX ---------- */
+  
+  
+.parallax {
+  background-image: url(../img/parallax/Artboard.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  color: #fff;
+  font-family: "PT_Sans_Regular";
+}
+
+.parallax .parallax-container {
+  height: 100vh;
+}
+
+.parallax .parallax-container .text {
+  padding-right: 70px;
+  text-align: center;
+}
+
+.parallax .parallax-container .text h3 {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 46px;
+  color: #FFFFFFFF;
+}
+
+.parallax .parallax-container .text.parallax-active-text {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%) !important;
+}
+
+.about .container .row * {
+  z-index: 1;
+}
+
+#parallax-container-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) !important;
+  visibility: hidden;
 }
