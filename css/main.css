@@ -1,10 +1,12 @@
 html {
   scroll-behavior: smooth;
 }
+
 .body {
   box-sizing: border-box;
   overflow-y: hidden;
 }
+
 h3 {
   font-family: "PT_Sans_Regular";
   font-weight: bold;
@@ -40,11 +42,13 @@ h5 {
 /* ---------- MENU ---------- */
 
 .menu-row {
+  width: 100%;
   height: 100px;
   color: #225378;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0px;
 }
 
 .desktop-nav li {
@@ -110,27 +114,82 @@ h5 {
   width: 20px;
 }
 
+.mobile-nav {
+  position: relative;
+  display: block;
+  height: 70px;
+  width: 70px;
+  border: #E3E3E3 solid 1px;
+  cursor: pointer;
+}
+
+.menu-line-1 {
+  position: absolute;
+  background: #225378;
+  height: 2px;
+  width: 30px;
+  top: 50%;
+  margin-bottom: -1px;
+  left: 50%;
+  margin-left: -15px;
+  transform: rotate()
+
+}
+
+.menu-line-2 {
+  position: absolute;
+  background: #225378;
+  height: 2px;
+  width: 30px;
+  top: 40%;
+
+  left: 50%;
+  margin-left: -15px;
+
+}
+
+.menu-line-3 {
+  position: absolute;
+  background: #225378;
+  height: 2px;
+  width: 30px;
+  top: 60%;
+  left: 50%;
+  margin-left: -15px;
+
+}
+
 /* ---------- HERO ---------- */
 
 .hero {
-  background: url(../img/sadok-1.png) no-repeat;
+  background: url(../img/sadok-1n.png) no-repeat;
   background-size: cover;
-  padding: 10% 0% 30% 0%;
+  padding: 15% 0% 20% 0%;
   width: 100%;
 }
 
 .hidden-block {
   width: 100%;
-  background: url(../img/sadok-2.png) no-repeat;
+  background: url(../img/sadok-2n.png) no-repeat;
   background-size: cover;
   display: none;
   color: #FFFFFF;
-  padding: 15% 0% 28% 0%;
-  margin-top: -2px;
+  padding: 15% 0% 20% 0%;
+
+
+}
+
+.hidden-content {
+  margin: 0 auto;
+  height: 200px;
+  width: 100%;
 }
 
 .hero-title {
+  margin: 0 auto;
   text-align: center;
+  height: 200px;
+  width: 100%;
 }
 
 .hero-title h1 {
@@ -181,15 +240,15 @@ h5 {
   font-family: "PT_Sans_Regular";
   font-weight: bold;
   font-size: 40px;
-  line-height: 60px;
+  line-height: 40px;
   text-align: center;
 }
 
 .hidden-block p {
   text-align: center;
-  width: 50%;
+  width: 60%;
   height: 100px;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .hidden-button {
@@ -224,7 +283,7 @@ h5 {
 
 
 .features-container {
-  margin: -70px auto;
+  margin: -50px auto;
   width: 90%;
   z-index: 99;
   background: #FFFFFF;
@@ -558,7 +617,7 @@ iframe {
 }
 
 .new-prev-content {
-  min-height: 240px;
+  height: 30vh;
   padding: 15px;
 }
 
@@ -635,7 +694,7 @@ iframe {
 }
 
 .form-block {
-  height: 755px;
+  height: 85vh;
   padding: 3%;
   background: url(../img/bg-form.png);
 }
@@ -660,8 +719,8 @@ iframe {
 }
 
 .contacts-list {
-  height: 755px;
-  padding: 12% 25% 10% 25%;
+  height: 85vh;
+  padding: 18% 25% 10% 25%;
   position: relative;
   background: url(../img/bg-contact.png) no-repeat;
   background-size: cover;
@@ -671,7 +730,7 @@ iframe {
 
 .bg-layout {
   width: 100%;
-  height: 755px;
+  height: 85vh;
   top: 0%;
   left: 0%;
   position: absolute;
@@ -834,10 +893,7 @@ iframe {
 
 .button-send img {
   height: 20px;
-  top: 50%;
-  margin-top: -12px;
-  right: 50%;
-  margin-right: -70px;
+  right: 20px;
   position: absolute;
   display: inline;
 }
@@ -864,6 +920,7 @@ iframe {
   flex-wrap: wrap;
   width: 25%;
   margin: 22px auto;
+  padding: 0;
 
 }
 
@@ -904,65 +961,134 @@ iframe {
 
 /* ---------- RESPONSIVE ---------- */
 
-@media screen and (max-width: 1200px) {
+@media (min-width: 1200px) {
+  .mobile-nav {
+    display: none;
+  }
+  
+}
 
-  .desktop-nav,
+@media (min-width: 991px) {
+  .news-hidden {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 1199px) {
+
+  .desktop-nav {
+    display: none;
+  }
+  .desktop-nav {
+    background: #FFFFFF;
+    position: absolute;
+    top: 100px;
+    left: 0%;
+    width: 100%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+  }
+  .nav li {
+    margin: 12px;
+  }
+  .mobile-nav {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  
+  .features-block {
+    padding: 50px;
+    border-bottom: 1px solid #E3E3E3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
   .menu-contacts,
   .menu-button {
     display: none;
   }
 
-  .hidden-block {
-    padding: 9% 0% 32% 0%;
-   
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .hidden-block {
-    padding: 5% 0% 35% 0%;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hidden-block {
-    padding: 5% 0% 33% 0%;
-  }
   .hero-title h1 {
     font-size: 60px;
   }
+
+  .main-block {
+    display: none;
+  }
+
+  .features-container {
+    margin-top: -50px;
+  }
+  .features-block {
+    height: 40vh;
+  }
+  .new-prev {
+    max-width: 80%;
+    margin: 10px auto;
+  }
+  .button-all-news {
+    text-align: center;
+  }
+  h3, h4 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .contacts h2 {
+    text-align: center;
+  }
+
+
+
 }
 
 @media screen and (max-width: 630px) {
   .hero-title h1 {
-    font-size: 42px;
+    font-size: 38px;
   }
+
   .hero-title span {
-    font-size: 22px;
+    font-size: 20px;
   }
-  .hero {
-    background: url(../img/sadok-1.png) no-repeat;
-    background-size: cover;
-    padding: 5% 0% 15% 0%;
-  }
-  .hidden-block {
-    width: 100%;
-    background: url(../img/sadok-2.png) no-repeat;
-    background-size: cover;
-    padding: 4% 0% 17% 0%;
-  }
+
   .hidden-block p {
-    width: 70%;
     margin: 20px auto;
   }
 
   .features-container {
     margin: -30px auto;
   }
+
   .hidden-block h2 {
     font-size: 30px;
   }
-  .hidden-block p {
-    
+
+  h3 {
+    font-size: 34px;
+    line-height: 30px;
+  }
+
+  h4 {
+    font-size: 38px;
+    line-height: 46px;
+    color: #383838;
   }
 }

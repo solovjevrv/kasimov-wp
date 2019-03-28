@@ -5,6 +5,13 @@ $(document).ready(function () {
   });
 });
 
+$(function(){
+  $(".mobile-nav").click(function (){
+    $(".desktop-nav").slideToggle(400);
+       
+  })
+})
+
 
 $(document).ready(function () { // for Step-2
   $(".step-2").mouseover(function () {

@@ -19,9 +19,7 @@
   <section class="header">
     <div class="container">
       <div class="row menu-row">
-        <div class="logo">
           <img src="img/logo.svg" alt="Логотип Касимовсетеснасть">
-        </div>
         <div class="desktop-nav">
           <ul class="nav">
             <li><a href="#">Главная</a></li>
@@ -31,6 +29,11 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </div>
+        <div class="mobile-nav">
+          <span class="menu-line-1"></span>
+          <span class="menu-line-2"></span>
+          <span class="menu-line-3"></span>
+        </div>
         <!-- /.desktop-nav -->
         <div class="menu-contacts">
           <a href="tel:+79001234565">+7-900-123-45-67</a><br>
@@ -39,6 +42,7 @@
         <div class="menu-button">
           <a href="#">Оставить заявку <img src="img/right-arrow.svg" alt=""></a>
         </div>
+        
       </div>
       <!-- /.row -->
     </div>
@@ -52,15 +56,17 @@
     <div class="hero-title">
       <h1>касимовсетеснасть</h1>
       <span>Мы знаем, где ваше рыбное место</span>
+      <a class="hero-button" href="#hidden">Подробнее</a>
     </div>
-    <a class="hero-button" href="#hidden">Подробнее</a>
   </div>
   <div class="hidden-block" id="hidden">
-        <h2>Садки для аквакультуры</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, amet!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, amet!
-        </p>
-        <a class="hidden-button" id="hidden-button" href="#">Каталог</a>
+    <div class="hidden-content">
+      <h2>Садки для аквакультуры</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, amet!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, amet!
+      </p>
+      <a class="hidden-button" id="hidden-button" href="#">Каталог</a>
+    </div>
   </div>
 
   <!-- < ---------- FEATURES ---------- > -->
@@ -68,9 +74,9 @@
     <div class="container features-container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          
+
           <div class="features-block">
-              <div class="decor-line"></div>
+            <div class="decor-line"></div>
             <img src="img/boat.svg" alt="">
             <h4>Производство сетей любого размера</h4>
             <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar
@@ -79,7 +85,7 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="features-block">
-              <div class="decor-line"></div>
+            <div class="decor-line"></div>
             <img src="img/net.svg" alt="">
             <h4>Изготовление безузловых сетей</h4>
             <p>Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque nec
@@ -88,7 +94,7 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="features-block">
-              <div class="decor-line"></div>
+            <div class="decor-line"></div>
             <img src="img/fishes.svg" alt="">
             <h4>Садки для выращивание рыбы</h4>
             <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit
@@ -259,7 +265,7 @@
               <div class="line"></div>
             </div>
           </div>
-          <div class="col ">
+          <div class="col">
             <div class="step-4">
               <svg id="step-4" width="65" height="65" viewBox="0 0 65 65" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -301,7 +307,7 @@
       </div>
       <div class="row">
 
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-6">
           <div class="new-prev">
             <img src="img/new1.png" alt="Новость">
             <div class="new-prev-content">
@@ -310,31 +316,43 @@
               <p class="post-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien
                 metus,scelerisque nec pharetra id, tempor a tortor. Pellentesque non dignissim neque. scelerisque nec
                 pharetra id, tempor a tortor.</p>
-              
+
             </div>
             <a href="#" class="post-button">Читать далее</a>
           </div>
         </div>
-        <div class="col-lg-3 col-md-12">
+        <div class="col-lg-3 col-md-6">
           <div class="new-prev">
             <img src="img/new2.png" alt="Новость">
             <div class="new-prev-content">
               <h5 class="post-title">Отличие узловых сетей от безузловых</h5>
               <span class="post-data">22/12/2018</span>
               <p class="post-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. </p>
-              
+
             </div>
             <a href="#" class="post-button">Читать далее</a>
           </div>
         </div>
-        <div class="col-lg-3 col-md-12">
+        <div class="col-lg-3 col-md-6">
           <div class="new-prev">
             <img src="img/new3.png" alt="Новость">
             <div class="new-prev-content">
               <h5 class="post-title">Как правильно кормить форель</h5>
               <span class="post-data">22/12/2018</span>
               <p class="post-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. </p>
-              
+
+            </div>
+            <a href="#" class="post-button">Читать далее</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 news-hidden">
+          <div class="new-prev">
+            <img src="img/new3.png" alt="Новость">
+            <div class="new-prev-content">
+              <h5 class="post-title">Как правильно кормить форель</h5>
+              <span class="post-data">22/12/2018</span>
+              <p class="post-text">Donec facilisis tortor ut augue lacinia, at viverra est semper. </p>
+
             </div>
             <a href="#" class="post-button">Читать далее</a>
           </div>
@@ -356,17 +374,17 @@
             <div class="form-title">
               <h2> Оставить заявку</h2>
               <h3>Начните сотрудничество</h3>
-            </div>    
-              
-              <form>
-                <input type="text" placeholder="Как к вам обращаться?">
-                <input type="email" placeholder="Ваш E-mail">
-                <textarea placeholder="Ваше сообщение"></textarea>
+            </div>
 
-              </form>
-              <p>Нажимая кнопку «Отправить», вы соглашаетесь с Политикой Конфиденциальности сайта</p>
-              <a href="#" class="button-send">Отправить <img src="img/ico-button-send.svg" alt=""></a>
-            
+            <form>
+              <input type="text" placeholder="Как к вам обращаться?">
+              <input type="email" placeholder="Ваш E-mail">
+              <textarea placeholder="Ваше сообщение"></textarea>
+
+            </form>
+            <p>Нажимая кнопку «Отправить», вы соглашаетесь с Политикой Конфиденциальности сайта</p>
+            <a href="#" class="button-send">Отправить <img src="img/ico-button-send.svg" alt=""></a>
+
           </div>
         </div>
         <div class="col-lg-6">
@@ -389,15 +407,15 @@
               <h5 class="contacts-title">Адрес</h5>
               <p class="contacts-text">Россия, 391302, Рязанская область, Касимов, ул. Федоровой, д. 53</p>
             </div>
-            
+
           </div>
-          
+
         </div>
       </div>
     </div>
   </section>
 
-    <!-- < ---------- CONTACTS ---------- > -->
+  <!-- < ---------- FOOTER ---------- > -->
   <section class="footer">
     <img src="img/Logo-black.svg" alt="Логотип">
     <div class="footer-menu">
