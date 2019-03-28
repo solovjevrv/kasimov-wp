@@ -59,13 +59,20 @@ $(document).ready(function () {
 
   $(".hero-button").click(function () {
     if ($(".hero-button").hasClass('active')) {
-      console.log($(".hero-button").hasClass('active'));
+      // console.log($(".hero-button").hasClass('active'));
       return false;
     } else {
       $(".hero-button").addClass('active');
       $("#hidden").slideToggle(600);
     }
   });
+  
+  $(function(){
+  $(".mobile-nav").click(function (){
+    $(".desktop-nav").slideToggle(400);
+       
+  })
+})
 
   // for Step-2
   $(".step-2").mouseover(function () {

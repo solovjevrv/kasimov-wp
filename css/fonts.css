@@ -5,12 +5,12 @@
   
 } 
 
-/* @font-face {
-  font-family: "PT_Sans_Bold";
+@font-face {
+  font-family: "PT_Sans_Regular";
   src: url(../fonts/PTSans-Bold.ttf) format("truetype");
   font-style: normal;
-  font-weight: normal;
-}  */
+  font-weight: bold;
+} 
 
 @font-face {
   font-family: "Open_Sans_Regular";
@@ -18,18 +18,18 @@
   font-style: normal;
   
 } 
-
-/* @font-face {
+/* 
+@font-face {
   font-family: "Open_Sans_SemiBold";
   src: url(../fonts/OpenSans-SemiBold.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
-} 
+}  */
 
 @font-face {
-  font-family: "Open_Sans_Bold";
+  font-family: "Open_Sans_Regular";
   src: url(../fonts/OpenSans-Bold.ttf) format("truetype");
   font-style: normal;
-  font-weight: normal;
-}  */
+  font-weight: bold;
+} 
 
