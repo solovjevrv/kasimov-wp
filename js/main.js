@@ -69,10 +69,20 @@ $(document).ready(function () {
   
   $(function(){
   $(".mobile-nav").click(function (){
-    $(".desktop-nav").slideToggle(400);
+    $(".desktop-nav").slideToggle(500);
        
   })
 })
+
+$(function () { 
+  $('.nav-item a').each(function () {
+      var location = window.location.href;
+      var link = this.href; 
+      if(location == link) {
+          $(this).addClass('nav-item-active');
+      }
+  });
+});
 
   // for Step-2
   $(".step-2").mouseover(function () {
