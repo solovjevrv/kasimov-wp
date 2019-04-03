@@ -1257,6 +1257,10 @@ iframe {
 .plus-btn-active {
   transform: rotate(45deg);
 }
+.sidebar-item:hover {
+  text-decoration: none;
+  color: #383838;
+}
 .presentation {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -1332,6 +1336,34 @@ iframe {
   text-decoration: none;
   color: #EB7F00;
 }
+/* ---------- CATALOG_SADKI ---------- */
+.calculator {
+  background: #E8F2F6;
+  padding: 50px 0px;
+  position: relative;
+  height: 800px; 
+}
+.calculator-title {
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  color: #383838;
+  text-align: center;
+}
+.sadok-svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -167px;
+  right: 10%;
+}
+
+
+.request-mini {
+  background: #EB7F00;
+  height: 173px;
+}
+
 
 /* ---------- RESPONSIVE ---------- */
 
