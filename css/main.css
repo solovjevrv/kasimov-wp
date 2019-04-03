@@ -1296,7 +1296,7 @@ iframe {
   color: #FFFFFF;
 }
 .content-block {
-  padding-left: 20px;
+  padding: 0px 20px;
 }
 .content-title {
   font-family: "PT_Sans_Regular";
@@ -1343,10 +1343,7 @@ table {
   color: #383838;
   text-align: center;
   vertical-align: middle;
-  margin-top: 20px;
-  width: 100%;
-}th, td:first-child {
-  font-weight: bold
+  width: 100%; 
 }
 table tr td:first-child {
   border-left: none;
@@ -1365,7 +1362,9 @@ tr td {
 tr th:last-child {
   color: #EB7F00;
 }
-
+.table-bold {
+  font-weight: bold;
+}
 
 
 /* ---------- CATALOG_SADKI ---------- */
@@ -1533,6 +1532,14 @@ tr th:last-child {
     flex-wrap: wrap;
     width: 20%;
   }
+  .hero-catalog-middle {
+    padding: 0;
+  }
+  .hero-catalog-btn {
+    display: block;
+    margin: 0 auto;
+  }
+
 }
 
 @media screen and (max-width: 630px) {
@@ -1565,5 +1572,12 @@ tr th:last-child {
     font-size: 38px;
     line-height: 46px;
     color: #383838;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero-catalog-btn {
+    font-size: 30px;
+    line-height: 40px;
   }
 }
