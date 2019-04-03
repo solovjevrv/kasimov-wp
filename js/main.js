@@ -69,10 +69,66 @@ $(document).ready(function () {
   
   $(function(){
   $(".mobile-nav").click(function (){
-    $(".desktop-nav").slideToggle(400);
+    $(".desktop-nav").slideToggle(500);
        
   })
 })
+
+$(function () { 
+  $('.nav-item a').each(function () {
+      var location = window.location.href;
+      var link = this.href; 
+      if(location == link) {
+          $(this).addClass('nav-item-active');
+      }
+  });
+});
+// аккордеон на категории товаров в каталоге
+
+$(function(){
+  $("#item-1").click(function(){
+    $("#list-1").slideToggle(400);
+    $("#list-2").hide(400);
+    $("#list-3").hide(400);
+    $("#list-4").hide(400);
+    $("#btn-1").toggleClass("plus-btn-active");
+    $("#btn-2").removeClass("plus-btn-active");
+    $("#btn-3").removeClass("plus-btn-active");
+    $("#btn-4").removeClass("plus-btn-active");
+  });
+  $("#item-2").click(function(){
+    $("#list-2").slideToggle(400);
+    $("#list-1").hide(400);
+    $("#list-3").hide(400);
+    $("#list-4").hide(400);
+    $("#btn-2").toggleClass("plus-btn-active");
+    $("#btn-1").removeClass("plus-btn-active");
+    $("#btn-3").removeClass("plus-btn-active");
+    $("#btn-4").removeClass("plus-btn-active");
+
+  });
+  $("#item-3").click(function(){
+    $("#list-3").slideToggle(400);
+    $("#list-1").hide(400);
+    $("#list-2").hide(400);
+    $("#list-4").hide(400);
+    $("#btn-3").toggleClass("plus-btn-active");
+    $("#btn-1").removeClass("plus-btn-active");
+    $("#btn-2").removeClass("plus-btn-active");
+    $("#btn-4").removeClass("plus-btn-active");
+  });
+  $("#item-4").click(function(){
+    $("#list-4").slideToggle(400);
+    $("#list-1").hide(400);
+    $("#list-2").hide(400);
+    $("#list-3").hide(400);
+    $("#btn-4").toggleClass("plus-btn-active");
+    $("#btn-1").removeClass("plus-btn-active");
+    $("#btn-3").removeClass("plus-btn-active");
+    $("#btn-2").removeClass("plus-btn-active");
+  });
+});
+
 
   // for Step-2
   $(".step-2").mouseover(function () {
