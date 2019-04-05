@@ -914,7 +914,6 @@ iframe {
 }
 
 .button-send img {
-  height: 20px;
   right: 20px;
   position: absolute;
   display: inline;
@@ -1495,6 +1494,45 @@ tr th:last-child {
   font-size: 18px;
   line-height: 24px;
   color: #FFFFFF;
+  margin: 23px 0px;
+  text-align: center;
+}
+
+.request-mini form {
+  margin: 40px 0px;
+  display: flex;
+}
+
+.request-mini input[type="email"]::placeholder {
+  padding: 18px 0px 18px 28px;
+  font-size: 21px;
+  line-height: 27px;
+  color: #4D4D4D;
+  mix-blend-mode: normal;
+  opacity: 0.52;
+}
+
+.request-mini input[type="email"] {
+  background: #FFFFFF;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.218859);
+  width: calc(100% - 64px);
+  height: 64px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border: none;
+}
+
+.request-mini button[type="submit"] {
+  background: #225378;
+  border-top-left-radius: 0px;
+  border-top-right-radius:5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  height: 64px;
+  width: 64px;
+  border: none;
 }
 
 
