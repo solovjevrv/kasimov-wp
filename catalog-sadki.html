@@ -18,7 +18,7 @@
   <section class="header">
     <div class="container">
       <div class="row menu-row">
-          <a href="index.html"><img src="img/logo.svg" alt="Логотип Касимовсетеснасть"></a>
+        <a href="index.html"><img src="img/logo.svg" alt="Логотип Касимовсетеснасть"></a>
         <div class="desktop-nav">
           <ul class="nav">
             <li class="nav-item"><a href="index.html">Главная</a></li>
@@ -64,8 +64,10 @@
               <ul class="sidebar-product-list" id="list-1">
                 <li><a class="sidebar-product-item" href="catalog-bezuzlovie-deli.html">Дели трикотажные
                     (безузловые)</a></li>
-                <li><a class="sidebar-product-item" href="catalog-nitochnie-uzlovie-deli.html">Дели ниточные (узловые)</a></li>
-                <li><a class="sidebar-product-item" href="catalog-setnie-plastini.html">Пластины сетные (узловые)</a></li>
+                <li><a class="sidebar-product-item" href="catalog-nitochnie-uzlovie-deli.html">Дели ниточные
+                    (узловые)</a></li>
+                <li><a class="sidebar-product-item" href="catalog-setnie-plastini.html">Пластины сетные (узловые)</a>
+                </li>
                 <li><a class="sidebar-product-item" href="catalog-setepolotna.html">Ряжевые сетеполотна</a></li>
               </ul>
             </div>
@@ -188,38 +190,53 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Выберите форму садка<img src="img/icons/plus.svg"></img>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Прямоугольный</a>
-              <a class="dropdown-item" href="#">Круглый</a>
-              <a class="dropdown-item" href="#">6-угольный</a>
-              <a class="dropdown-item" href="#">8-угольный</a>
+        <div class="col-md-6">
+          <div class="content">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Выберите форму садка</b><span class="plus-btn calc-plus"></span>
+                <!-- <img src="img/icons/plus.svg"></img> -->
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Прямоугольный</a>
+                <a class="dropdown-item" href="#">Круглый</a>
+                <a class="dropdown-item" href="#">6-угольный</a>
+                <a class="dropdown-item" href="#">8-угольный</a>
+              </div>
             </div>
-          </div>
-          <p>Диаметр (см)</p>
-          <input id="diameter" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
-          <p>Ширина (см)</p>
-          <input id="width" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
-          <p>Высота (см)</p>
-          <input id="height" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Вид сетеполотна
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Вид 1</a>
-              <a class="dropdown-item" href="#">Вид 2</a>
-              <a class="dropdown-item" href="#">Вид 3</a>
+            <p>Диаметр (см)</p>
+            <input id="diameter" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+            <p>Ширина (см)</p>
+            <input id="width" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+            <p>Высота (см)</p>
+            <input id="height" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Вид сетеполотна</b><span class="plus-btn calc-plus"></span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Вид 1</a>
+                <a class="dropdown-item" href="#">Вид 2</a>
+                <a class="dropdown-item" href="#">Вид 3</a>
+              </div>
             </div>
+            <p>Толщина нити</p>
+            <input id="thickness" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
           </div>
-          <p>Толщина нити</p>
-          <input id="thickness" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+        </div>
+        <div class="col-md-6">
+          <div class="content">
+            <span>Наличие кормового столика</span>
+            <input class="switcher" type="checkbox" id="switch-1" /><label for="switch-1">Toggle</label>
+            <span>Наличие крышки</span>
+            <input class="switcher" type="checkbox" id="switch-2" /><label for="switch-2">Toggle</label>
+            <span>Узловое</span>
+            <input class="checkboxer" type="checkbox" id="checkbox-1" /><label for="checkbox-1" class="check-box"></label> 
+            <span>Безузловое</span>
+            <input class="checkboxer" type="checkbox" id="checkbox-2" /><label for="checkbox-2" class="check-box"></label> 
+          </div>
         </div>
       </div>
 
