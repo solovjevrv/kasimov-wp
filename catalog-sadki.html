@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/rangeslider.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
 </head>
 
@@ -140,10 +141,90 @@
     </div>
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- < ---------- CALCULATOR ---------- > -->
   <section class="calculator">
     <div class="container">
-      <h3 class="calculator-title">Оставьте заявку на расчет</h3>
+      <div class="row">
+        <div class="col-6">
+          <h3 class="calculator-title">Оставьте заявку на расчет</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Выберите форму садка<img src="img/icons/plus.svg"></img>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Прямоугольный</a>
+              <a class="dropdown-item" href="#">Круглый</a>
+              <a class="dropdown-item" href="#">6-угольный</a>
+              <a class="dropdown-item" href="#">8-угольный</a>
+            </div>
+          </div>
+          <p>Диаметр (см)</p>
+          <input id="diameter" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+          <p>Ширина (см)</p>
+          <input id="width" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+          <p>Высота (см)</p>
+          <input id="height" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Вид сетеполотна
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Вид 1</a>
+              <a class="dropdown-item" href="#">Вид 2</a>
+              <a class="dropdown-item" href="#">Вид 3</a>
+            </div>
+          </div>
+          <p>Толщина нити</p>
+          <input id="thickness" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+        </div>
+      </div>
+
+
+
 
     </div>
     <svg class="sadok-svg" width="291" height="334" viewBox="0 0 291 334" fill="none"
@@ -164,12 +245,43 @@
 
 
   </section>
+
   <div class="request-mini">
     <h5 class="request-mini-title">Для получения подробного расчета…</h5>
     <form>
       <input type="email" placeholder="Ваш E-mail">
     </form>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- < ---------- FOOTER ---------- > -->
@@ -189,9 +301,49 @@
   </section>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/rangeslider.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      // $('input[type="range"]').rangeslider();
+      // $('input[type="range"]').val(100).change();
+
+      $('input[type="range"]').rangeslider({
+        polyfill: false,
+        rangeClass: 'rangeslider',
+        disabledClass: 'rangeslider--disabled',
+        horizontalClass: 'rangeslider--horizontal',
+        verticalClass: 'rangeslider--vertical',
+        fillClass: 'rangeslider__fill',
+        handleClass: 'rangeslider__handle',
+
+        onInit: function () {
+          $rangeEl = this.$range;
+          // add value label to handle
+          var $handle = $rangeEl.find('.rangeslider__handle');
+          var handleValue = '<div class="rangeslider__handle__value">' + this.value + '</div>';
+          $handle.append(handleValue);
+        },
+
+        // Callback function
+        onSlide: function (position, value) {
+          var $handle = this.$range.find('.rangeslider__handle__value');
+          $handle.text(this.value);
+        },
+
+        // Callback function
+        onSlideEnd: function (position, value) {}
+
+      });
+
+      // $('input[type="range"]#1').val(1000).change();
+
+    })
+  </script>
 </body>
 
 </html>
