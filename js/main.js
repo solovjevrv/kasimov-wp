@@ -101,7 +101,6 @@ $(function(){
     $("#list-1").hide(400);
     $("#list-3").hide(400);
     $("#list-4").hide(400);
-    $("#btn-2").toggleClass("plus-btn-active");
     $("#btn-1").removeClass("plus-btn-active");
     $("#btn-3").removeClass("plus-btn-active");
     $("#btn-4").removeClass("plus-btn-active");
