@@ -88,44 +88,18 @@ $(function () {
 $(function(){
   $("#item-1").click(function(){
     $("#list-1").slideToggle(400);
-    $("#list-2").hide(400);
     $("#list-3").hide(400);
-    $("#list-4").hide(400);
     $("#btn-1").toggleClass("plus-btn-active");
-    $("#btn-2").removeClass("plus-btn-active");
-    $("#btn-3").removeClass("plus-btn-active");
-    $("#btn-4").removeClass("plus-btn-active");
-  });
-  $("#item-2").click(function(){
-    $("#list-2").slideToggle(400);
-    $("#list-1").hide(400);
-    $("#list-3").hide(400);
-    $("#list-4").hide(400);
-    $("#btn-1").removeClass("plus-btn-active");
-    $("#btn-3").removeClass("plus-btn-active");
-    $("#btn-4").removeClass("plus-btn-active");
+     $("#btn-3").removeClass("plus-btn-active");
 
   });
-  $("#item-3").click(function(){
+   $("#item-3").click(function(){
     $("#list-3").slideToggle(400);
     $("#list-1").hide(400);
-    $("#list-2").hide(400);
-    $("#list-4").hide(400);
     $("#btn-3").toggleClass("plus-btn-active");
     $("#btn-1").removeClass("plus-btn-active");
-    $("#btn-2").removeClass("plus-btn-active");
-    $("#btn-4").removeClass("plus-btn-active");
   });
-  $("#item-4").click(function(){
-    $("#list-4").slideToggle(400);
-    $("#list-1").hide(400);
-    $("#list-2").hide(400);
-    $("#list-3").hide(400);
-    $("#btn-4").toggleClass("plus-btn-active");
-    $("#btn-1").removeClass("plus-btn-active");
-    $("#btn-3").removeClass("plus-btn-active");
-    $("#btn-2").removeClass("plus-btn-active");
-  });
+  
 });
 
 
