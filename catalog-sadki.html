@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/fonts.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/rangeslider.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
 </head>
 
@@ -130,10 +131,68 @@
   </section>
 
   <!-- < ---------- CALCULATOR ---------- > -->
+
   <section class="calculator">
     <div class="container">
-      <h3 class="calculator-title">Оставьте заявку на расчет</h3>
-
+      <div class="row">
+        <div class="col-6">
+          <h3 class="calculator-title">Оставьте заявку на расчет</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="content">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Выберите форму садка</b><span class="plus-btn calc-plus"></span>
+                <!-- <img src="img/icons/plus.svg"></img> -->
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Прямоугольный</a>
+                <a class="dropdown-item" href="#">Круглый</a>
+                <a class="dropdown-item" href="#">6-угольный</a>
+                <a class="dropdown-item" href="#">8-угольный</a>
+              </div>
+            </div>
+            <p>Диаметр (см)</p>
+            <input id="diameter" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+            <p>Ширина (см)</p>
+            <input id="width" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+            <p>Высота (см)</p>
+            <input id="height" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Вид сетеполотна</b><span class="plus-btn calc-plus"></span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Вид 1</a>
+                <a class="dropdown-item" href="#">Вид 2</a>
+                <a class="dropdown-item" href="#">Вид 3</a>
+              </div>
+            </div>
+            <p>Толщина нити</p>
+            <input id="thickness" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="content right-block">
+            <span>Наличие кормового столика</span>
+            <input class="switcher" type="checkbox" id="switch-1" /><label for="switch-1"
+              class="switcher-box">Toggle</label>
+            <span>Наличие крышки</span>
+            <input class="switcher" type="checkbox" id="switch-2" /><label for="switch-2"
+              class="switcher-box">Toggle</label>
+            <span>Узловое</span>
+            <input class="checkboxer" type="checkbox" id="checkbox-1" /><label for="checkbox-1"
+              class="check-box"></label>
+            <span>Безузловое</span>
+            <input class="checkboxer" type="checkbox" id="checkbox-2" /><label for="checkbox-2"
+              class="check-box"></label>
+          </div>
+        </div>
+      </div>
     </div>
     <svg class="sadok-svg" width="291" height="334" viewBox="0 0 291 334" fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -150,15 +209,65 @@
       <path d="M249 138L44 24" stroke="#C6C6C6" stroke-linecap="square" />
       <path d="M249 310.442L45 195.558" stroke="#C6C6C6" stroke-linecap="square" />
     </svg>
-
-
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
   <div class="request-mini">
-    <h5 class="request-mini-title">Для получения подробного расчета…</h5>
-    <form>
-      <input type="email" placeholder="Ваш E-mail">
-    </form>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-6">
+          <h5 class="request-mini-title">Для получения подробного расчета…</h5>
+          <form>
+            <input type="email" placeholder="Введите ваш e-mail">
+            <button type="submit"><img src="img/icons/send.svg" alt="send" /></button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- < ---------- FOOTER ---------- > -->
@@ -178,9 +287,49 @@
   </section>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/rangeslider.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      // $('input[type="range"]').rangeslider();
+      // $('input[type="range"]').val(100).change();
+
+      $('input[type="range"]').rangeslider({
+        polyfill: false,
+        rangeClass: 'rangeslider',
+        disabledClass: 'rangeslider--disabled',
+        horizontalClass: 'rangeslider--horizontal',
+        verticalClass: 'rangeslider--vertical',
+        fillClass: 'rangeslider__fill',
+        handleClass: 'rangeslider__handle',
+
+        onInit: function () {
+          $rangeEl = this.$range;
+          // add value label to handle
+          var $handle = $rangeEl.find('.rangeslider__handle');
+          var handleValue = '<div class="rangeslider__handle__value">' + this.value + '</div>';
+          $handle.append(handleValue);
+        },
+
+        // Callback function
+        onSlide: function (position, value) {
+          var $handle = this.$range.find('.rangeslider__handle__value');
+          $handle.text(this.value);
+        },
+
+        // Callback function
+        onSlideEnd: function (position, value) {}
+
+      });
+
+      // $('input[type="range"]#1').val(1000).change();
+
+    })
+  </script>
 </body>
 
 </html>
