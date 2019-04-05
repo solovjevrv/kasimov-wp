@@ -1,3 +1,7 @@
-<svg width="71" height="51" viewBox="0 0 71 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M32.5572 45.3329L47.9985 14.7531L15.2019 24.6497L21.9397 32.7028L41.1041 20.5382L25.7964 37.299L32.5572 45.3329Z" fill="white"/>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="send" transform="translate(9.000000, 10.000000)" fill="#FFFFFF">
+            <polygon id="Path" points="17.3553 30.5798 32.7966 1.77635684e-15 0 9.8966 6.7378 17.9497 25.9022 5.7851 10.5945 22.5459"></polygon>
+        </g>
+    </g>
 </svg>

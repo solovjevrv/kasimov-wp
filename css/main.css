@@ -291,7 +291,7 @@ h5 {
 }
 
 .features-container .col-lg-3,
-.col-md-6 {
+.features-container .col-md-6 {
   padding: 0;
 }
 
@@ -1467,7 +1467,6 @@ tr th:last-child {
   background: #E8F2F6;
   padding: 50px 0px;
   position: relative;
-  height: 800px;
 }
 
 .calculator-title {
@@ -1599,6 +1598,11 @@ tr th:last-child {
 }
 
 @media screen and (max-width: 991px) {
+
+  .sadok-svg {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   .features-block {
     padding: 50px;
