@@ -1635,6 +1635,8 @@ h6 {
 }
 
 .history-slide img {
+  display: block;
+  margin-left: auto;
   border: 6px solid #FFFFFF;
   box-sizing: border-box;
   box-shadow: 3px 4px 11px rgba(0, 0, 0, 0.5);
@@ -1698,14 +1700,30 @@ h6 {
   background-image: url(../img/icons/arrow-left.svg);
 }
 
-
-
-
-
-
-
+.about-history .image-block {
+  justify-content: flex-end;
+  justify-items: end;
+}
 
 /* ---------- RESPONSIVE ---------- */
+
+@media screen and (max-width: 1330px) {
+  .swiper-button-right {
+    left: auto;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-left {
+    right: auto;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 1070px) {}
 
 @media (min-width: 1200px) {
   .mobile-nav {
