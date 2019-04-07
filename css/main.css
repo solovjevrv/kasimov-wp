@@ -1569,33 +1569,20 @@ h6 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ------------- ABOUT ------------- */
 
 .about-block-two {
   background: #E8F2F6;
 }
+
 .about-block-two h3 {
-font-family: "PT_Sans_Regular";
-font-weight: bold;
-font-size: 46px;
-line-height: 52px;
-color: #383838;
-margin-top: 70px;
-margin-bottom: 35px;
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 52px;
+  color: #383838;
+  margin-top: 70px;
+  margin-bottom: 35px;
 }
 
 
@@ -1636,11 +1623,80 @@ margin-bottom: 35px;
   opacity: 1;
 }
 
+.about-history .container-fluid {
+  background: #225378;
+  padding-bottom: 40px;
+}
 
+.history-slide {
+  background: #EB7F00;
+  color: #FFF;
+  cursor: pointer;
+}
 
+.history-slide img {
+  border: 6px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 3px 4px 11px rgba(0, 0, 0, 0.5);
+  margin: 40px 0px;
+}
 
+.history-slide span {
+  font-family: "PT_Sans_Regular";
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: block;
+}
 
+.history-slide p {
+  font-size: 20px;
+  line-height: 27px;
+  display: block;
+}
 
+.history-thumbs span {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #FFFFFF;
+  display: block;
+  cursor: pointer;
+}
+
+.about-history .container-fluid .container .history-thumbs {
+  text-align: center;
+}
+
+.swiper-slide-thumb-active span {
+  text-decoration-line: underline;
+
+}
+
+#about-date-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.swiper-button-right {
+  left: auto;
+  right: 25px;
+  width: 67px;
+  height: 67px;
+  background-size: cover;
+  background-image: url(../img/icons/arrow-right.svg);
+}
+
+.swiper-button-left {
+  right: auto;
+  left: 25px;
+  width: 67px;
+  height: 67px;
+  background-size: cover;
+  background-image: url(../img/icons/arrow-left.svg);
+}
 
 
 
