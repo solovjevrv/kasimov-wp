@@ -1737,7 +1737,7 @@ h6 {
     grid-column: 1/5;
   }
 }
-}
+
 
 @media (min-width: 767px) {
   .mobile-block {
@@ -2030,4 +2030,4 @@ h6 {
     display: none;
   }
 }
-}
+
