@@ -1588,8 +1588,15 @@ h6 {
 .about-block-two {
   background: #E8F2F6;
 }
-
-
+.about-block-two h3 {
+font-family: "PT_Sans_Regular";
+font-weight: bold;
+font-size: 46px;
+line-height: 52px;
+color: #383838;
+margin-top: 70px;
+margin-bottom: 35px;
+}
 
 
 .about-bottom-slider .row {
