@@ -1665,6 +1665,7 @@ h6 {
 
 .about-block-two {
   background: #E8F2F6;
+  font-family: "Open_Sans_Regular";
 }
 
 .about-block-two h3 {
@@ -1726,6 +1727,7 @@ h6 {
 .gallery-thumbs .swiper-slide {
   height: 100%;
   opacity: 0.4;
+  min-width: 110px;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
@@ -2067,6 +2069,10 @@ h6 {
   margin: 0;
 }
 
+.about-bottom-slider video {
+  min-height: 100%;
+}
+
 /* ---------- RESPONSIVE ---------- */
 
 @media screen and (max-width: 1330px) {
@@ -2085,7 +2091,11 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1070px) {}
+@media screen and (max-width: 1070px) {
+  .about-bottom-slider video {
+    object-fit: none;
+  }
+}
 
 @media (min-width: 1200px) {
   .mobile-nav {
