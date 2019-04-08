@@ -1762,6 +1762,7 @@ h6 {
   box-sizing: border-box;
   box-shadow: 3px 4px 11px rgba(0, 0, 0, 0.5);
   margin: 40px 0px;
+  max-width: 100%;
 }
 
 .history-slide span {
@@ -2515,7 +2516,23 @@ h6 {
 
 }
 
+@media screen and (max-width: 492px) {
+.history-thumbs span {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.swiper-button-left {
+  visibility: hidden;
+}
+
+.swiper-button-right {
+  visibility: hidden;
+}
+}
+
 @media screen and (max-width: 470px) {
+
   .hero-title h1 {
     font-size: 32px;
   }
