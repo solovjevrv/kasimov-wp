@@ -77,13 +77,20 @@
             <div class="sidebar-category">
               <span class="sidebar-item" id="item-3">Материалы для лова<span class="plus-btn" id="btn-3"></span></span>
               <ul class="sidebar-product-list" id="list-3">
-                <li><a class="sidebar-product-item" href="catalog-nitki-rybolovnie.html">Нитки рыболовные крученые
-                    полиамидные ТУ 15-08-31-89 </a></li>
-                <li><a class="sidebar-product-item" href="catalog-verevki.html">Веревки рыболовные крученые полиамидные
-                    ТУ 15-08-332-89</a></li>
-                <li><a class="sidebar-product-item" href="catalog-shnuri.html">Шнуры рыболовные плетеные полиамидные ТУ
+                <li>
+                  <a class="sidebar-product-item" href="catalog-nitki-rybolovnie.html">Нитки рыболовные крученые
+                    полиамидные ТУ 15-08-31-89 </a>
+                </li>
+                <li>
+                  <a class="sidebar-product-item" href="catalog-verevki.html">Веревки рыболовные крученые полиамидные ТУ
+                    15-08-332-89</a>
+                </li>
+                <li>
+                  <a class="sidebar-product-item" href="catalog-shnuri.html">Шнуры рыболовные плетеные полиамидные ТУ
                     15-08-333-89</a></li>
-                <li><a class="sidebar-product-item" href="catalog-poplavki.html">Поплавки и наплава</a></li>
+                <li>
+                  <a class="sidebar-product-item" href="catalog-poplavki.html">Поплавки и наплава</a>
+                </li>
               </ul>
             </div>
             <div class="sidebar-category">
@@ -142,36 +149,27 @@
         <div class="col-md-6">
           <div class="content">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <b>Выберите форму садка</b><span class="plus-btn calc-plus"></span>
-                <!-- <img src="img/icons/plus.svg"></img> -->
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Прямоугольный</a>
-                <a class="dropdown-item" href="#">Круглый</a>
-                <a class="dropdown-item" href="#">6-угольный</a>
-                <a class="dropdown-item" href="#">8-угольный</a>
-              </div>
+              <select id="typeSadok" class="custom-select">
+                <option disabled selected>Выберите форму садка</option>
+                <option value="type-1">Прямоугольный</option>
+                <option value="type-2">Круглый</option>
+                <option value="type-3">6-угольный</option>
+                <option value="type-4">8-угольный</option>
+              </select>
+              <span class="plus-btn calc-plus"></span>
             </div>
-            <p>Диаметр (см)</p>
-            <input id="diameter" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
-            <p>Ширина (см)</p>
+            <p id="text-range-1">Длина (см)</p>
+            <input id="long" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
+            <p id="text-range-2">Ширина (см)</p>
             <input id="width" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
-            <p>Высота (см)</p>
+            <p id="text-range-3">Высота (см)</p>
             <input id="height" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <b>Вид сетеполотна</b><span class="plus-btn calc-plus"></span>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Вид 1</a>
-                <a class="dropdown-item" href="#">Вид 2</a>
-                <a class="dropdown-item" href="#">Вид 3</a>
-              </div>
+              <select id="nite" class="custom-select">
+              </select>
+              <span class="plus-btn calc-plus"></span>
             </div>
-            <p>Толщина нити</p>
+            <p>Размер ячеи (мм)</p>
             <input id="thickness" type="range" min="1" max="1000" step="1" value="300" data-orientation="horizontal">
           </div>
         </div>
@@ -184,10 +182,10 @@
             <input class="switcher" type="checkbox" id="switch-2" /><label for="switch-2"
               class="switcher-box">Toggle</label>
             <span>Узловое</span>
-            <input class="checkboxer" type="checkbox" id="checkbox-1" /><label for="checkbox-1"
+            <input class="checkboxer" type="checkbox" id="checkbox-uzel" /><label for="checkbox-uzel"
               class="check-box"></label>
             <span>Безузловое</span>
-            <input class="checkboxer" type="checkbox" id="checkbox-2" /><label for="checkbox-2"
+            <input class="checkboxer" type="checkbox" id="checkbox-bezuzel" /><label for="checkbox-bezuzel"
               class="check-box"></label>
           </div>
         </div>
@@ -252,6 +250,7 @@
       // $('input[type="range"]').rangeslider();
       // $('input[type="range"]').val(100).change();
 
+      // Калькулятор
       $('input[type="range"]').rangeslider({
         polyfill: false,
         rangeClass: 'rangeslider',
@@ -273,14 +272,108 @@
         onSlide: function (position, value) {
           var $handle = this.$range.find('.rangeslider__handle__value');
           $handle.text(this.value);
-        },
-
-        // Callback function
-        onSlideEnd: function (position, value) {}
-
+        }
       });
 
       // $('input[type="range"]#1').val(1000).change();
+
+
+
+
+      $("#nite").append('<option disabled selected>Структура нити');
+      $("#nite").append('<option disabled>Необходимо выбрать вид сетеполотна: узловое или безузловое');
+
+      // $.each(items, function (i, item) {
+      //   $('#nite').append($('<option>', {
+      //     value: item.value,
+      //     text: item.text
+      //   }));
+      // });
+
+
+
+
+      // Функция построения списка
+      function updateNite(data) {
+        $('#nite').empty();
+        $("#nite").append('<option disabled selected>Структура нити');
+        $.each(data, function (i, item) {
+          $('#nite').append($('<option>', {
+            value: item,
+            text: item
+          }));
+        });
+      }
+
+
+
+
+      //$inputRange.prop("disabled", false);
+
+      // Проверяем чекбоксы
+      $("#checkbox-uzel").click(() => {
+        if ($("#checkbox-uzel").prop("checked")) {
+          $('#checkbox-bezuzel').prop('checked', false);
+          let data = ["29×2", "29×3", "29×4", "29х6", "93,5×2", "93,5×3", "187×2", "187×3", "187×4", "187×6",
+            "187×9"
+          ];
+          updateNite(data);
+        }
+      })
+
+      $("#checkbox-bezuzel").click(() => {
+        if ($("#checkbox-bezuzel").prop("checked")) {
+          $('#checkbox-uzel').prop('checked', false);
+          let data = ["29×3", "29×4", "93.5×3", "93.5×4", "93.5×5", "93,5×6", "187×4"];
+          updateNite(data);
+        }
+      })
+
+      // Проверяем тип садка
+      $('#typeSadok').on('change', function () {
+        let value = $("#typeSadok").val();
+				console.log("TCL: value", value)
+        
+        let $long = $('#long');
+        let $width = $('#width');
+        let $height = $('#lheightong');
+
+
+        if (value == "type-1") {
+          $long.prop("disabled", false);
+          $width.prop("disabled", false);
+          $height.prop("disabled", false);
+          $("#text-range-1").text("Длина (см)");
+          $("#text-range-2").text("Ширина (см)");
+          $("#text-range-3").text("Высота (см)");
+        } else if (value == "type-2") {
+          $long.prop("disabled", true);
+          $width.prop("disabled", true);
+          $height.prop("disabled", false);
+          $("#text-range-1").text("Длина (см)");
+          $("#text-range-2").text("Ширина (см)");
+          $("#text-range-3").text("Высота (см)");
+        } else if (value == "type-3") {
+          $long.prop("disabled", false);
+          $width.prop("disabled", false);
+          $height.prop("disabled", false);
+          $("#text-range-1").text("Ширина ребра (см)");
+          $("#text-range-2").text("Диаметер (см)");
+          $("#text-range-3").text("Высота (см)");
+        } else if (value == "type-4") {
+          $long.prop("disabled", false);
+          $width.prop("disabled", false);
+          $height.prop("disabled", false);
+          $("#text-range-1").text("Ширина ребра (см)");
+          $("#text-range-2").text("Диаметер (см)");
+          $("#text-range-3").text("Высота (см)");
+        }
+
+        $long.rangeslider('update');
+        $width.rangeslider('update');
+        $height.rangeslider('update');
+      });
+
 
     })
   </script>
