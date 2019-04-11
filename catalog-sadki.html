@@ -247,7 +247,6 @@
   <script src="js/main.js"></script>
   <script>
     $(document).ready(function () {
-      // $('input[type="range"]').rangeslider();
       // $('input[type="range"]').val(100).change();
 
       // Калькулятор
@@ -275,23 +274,8 @@
         }
       });
 
-      // $('input[type="range"]#1').val(1000).change();
-
-
-
-
       $("#nite").append('<option disabled selected>Структура нити');
       $("#nite").append('<option disabled>Необходимо выбрать вид сетеполотна: узловое или безузловое');
-
-      // $.each(items, function (i, item) {
-      //   $('#nite').append($('<option>', {
-      //     value: item.value,
-      //     text: item.text
-      //   }));
-      // });
-
-
-
 
       // Функция построения списка
       function updateNite(data) {
@@ -305,11 +289,6 @@
         });
       }
 
-
-
-
-      //$inputRange.prop("disabled", false);
-
       // Проверяем чекбоксы
       $("#checkbox-uzel").click(() => {
         if ($("#checkbox-uzel").prop("checked")) {
@@ -318,6 +297,15 @@
             "187×9"
           ];
           updateNite(data);
+          let $slider = $("#thickness");
+          var attributes = {
+            min: 6.5,
+            max: 200,
+            step: 0.1
+          };
+          $slider.attr(attributes);
+          $slider.val(6.5);
+          $slider.rangeslider('update', true);
         }
       })
 
@@ -326,18 +314,25 @@
           $('#checkbox-uzel').prop('checked', false);
           let data = ["29×3", "29×4", "93.5×3", "93.5×4", "93.5×5", "93,5×6", "187×4"];
           updateNite(data);
+          let $slider = $("#thickness");
+          var attributes = {
+            min: 2.8,
+            max: 40,
+            step: 0.1
+          };
+          $slider.attr(attributes);
+          $slider.val(2.8);
+          $slider.rangeslider('update', true);
         }
       })
 
       // Проверяем тип садка
       $('#typeSadok').on('change', function () {
         let value = $("#typeSadok").val();
-				console.log("TCL: value", value)
-        
+
         let $long = $('#long');
         let $width = $('#width');
         let $height = $('#lheightong');
-
 
         if (value == "type-1") {
           $long.prop("disabled", false);
