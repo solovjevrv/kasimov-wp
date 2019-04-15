@@ -145,7 +145,7 @@ input[type="range"]:focus+.rangeslider .rangeslider__handle {
   height: 14px;
   position: absolute;
   top: unset;
-  bottom: 9px;
+  bottom: 12px;
   margin-top: -8px;
   right: 15px;
   background: #979797;
@@ -159,9 +159,10 @@ input[type="range"]:focus+.rangeslider .rangeslider__handle {
   background: #979797;
   position: absolute;
   top: 50%;
-  margin-top: -1px;
-  right: 0%;
-  margin-right: -6px;
+  margin-top: 7%;
+  right: 3%;
+  margin-right: -7px;
+  transform: rotate(0deg);
 }
 
 .dropdown-menu {
@@ -383,4 +384,19 @@ input[type=checkbox].checkboxer:checked+.check-box::before,
   -o-animation: dothatopcheck 0.4s ease 0s forwards;
   -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
   animation: dothatopcheck 0.4s ease 0s forwards;
+}
+
+
+.custom-select {
+  margin-top: 33px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.02), 0px 1px 3px rgba(50, 50, 93, 0.15);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 19px;
+  color: #383838;
+  width: 100%;
+  text-align: left;
+  border-color: #fff;
 }
