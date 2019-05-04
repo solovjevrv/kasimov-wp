@@ -1,5 +1,39 @@
 $(document).ready(function () {
 
+  let projectSwiper = new Swiper('.blog-slider', {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: false,
+    touchReleaseOnEdges: true,
+    mousewheel: {
+      invert: false,
+      releaseOnEdges: true,
+      sensitivity: 1
+    },
+    slideToClickedSlide: false,
+    autoHeight: true,
+    pagination: {
+      el: '.blog-slider__pagination',
+      clickable: true,
+    }
+  });
+
+  projectSwiper.on('init', function() { /* do something */ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Инициализация плагина Анимации
   AOS.init({
     once: false,
@@ -10,7 +44,7 @@ $(document).ready(function () {
 
   let lastMouseWheelEvent;
   $(document).on('mousewheel', function (e) {
-    if ( e.originalEvent.deltaY > 0) {
+    if (e.originalEvent.deltaY > 0) {
       lastMouseWheelEvent = "down";
     } else {
       lastMouseWheelEvent = "up";
@@ -66,51 +100,51 @@ $(document).ready(function () {
       $("#hidden").slideToggle(600);
     }
   });
-  
-  $(function(){
-  $(".mobile-nav").click(function (){
-    $(".desktop-nav").slideToggle(500);
-       
+
+  $(function () {
+    $(".mobile-nav").click(function () {
+      $(".desktop-nav").slideToggle(500);
+
+    })
   })
-})
 
-$(function () { 
-  $('.nav-item a').each(function () {
+  $(function () {
+    $('.nav-item a').each(function () {
       var location = window.location.href;
-      var link = this.href; 
-      if(location == link) {
-          $(this).addClass('nav-item-active');
+      var link = this.href;
+      if (location == link) {
+        $(this).addClass('nav-item-active');
       }
+    });
   });
-});
-// аккордеон на категории товаров в каталоге
+  // аккордеон на категории товаров в каталоге
 
-$(function(){
-  $("#item-1").click(function(){
-    $("#list-1").slideToggle(400);
-    $("#list-3").hide(400);
-    $("#btn-1").toggleClass("plus-btn-active");
-     $("#btn-3").removeClass("plus-btn-active");
+  $(function () {
+    $("#item-1").click(function () {
+      $("#list-1").slideToggle(400);
+      $("#list-3").hide(400);
+      $("#btn-1").toggleClass("plus-btn-active");
+      $("#btn-3").removeClass("plus-btn-active");
+
+    });
+    $("#item-3").click(function () {
+      $("#list-3").slideToggle(400);
+      $("#list-1").hide(400);
+      $("#btn-3").toggleClass("plus-btn-active");
+      $("#btn-1").removeClass("plus-btn-active");
+    });
 
   });
-   $("#item-3").click(function(){
-    $("#list-3").slideToggle(400);
-    $("#list-1").hide(400);
-    $("#btn-3").toggleClass("plus-btn-active");
-    $("#btn-1").removeClass("plus-btn-active");
-  });
-  
-});
 
-$(function () { 
-  $('.pagination li a').each(function () {
+  $(function () {
+    $('.pagination li a').each(function () {
       var location = window.location.href;
-      var link = this.href; 
-      if(location == link) {
-          $(this).addClass('pagination-active');
+      var link = this.href;
+      if (location == link) {
+        $(this).addClass('pagination-active');
       }
+    });
   });
-});
 
   // for Step-2
   $(".step-2").mouseover(function () {
